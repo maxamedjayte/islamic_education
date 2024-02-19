@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{exam_type} - {entring_date} ",
+ "creation": "2024-02-13 23:08:09.803644",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "exam_type",
+  "column_break_e327z",
+  "academic_year",
+  "section_break_bh7j0",
+  "other_info",
+  "column_break_yz3ha",
+  "entring_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "exam_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Exam Type",
+   "options": "Exam Types",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_e327z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "section_break_bh7j0",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "other_info",
+   "fieldtype": "Data",
+   "label": "Info",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_yz3ha",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entring_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Time",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-13 23:08:09.803644",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Exam Announcement",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "translated_doctype": 1
+}

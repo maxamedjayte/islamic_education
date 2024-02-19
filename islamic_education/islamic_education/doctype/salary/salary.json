@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: {employee_name} - {salary_month}",
+ "creation": "2024-02-14 17:39:18.794641",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "salary_month",
+  "column_break_wwhyf",
+  "employee",
+  "column_break_ddnis",
+  "employee_name",
+  "salary",
+  "payment_section",
+  "paided",
+  "balance",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Worker",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salary_month",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Salary Month",
+   "options": "Monthly Financial",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "employee.ctc",
+   "fieldname": "salary",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Salary",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_section",
+   "fieldtype": "Section Break",
+   "label": "Payment"
+  },
+  {
+   "fieldname": "paided",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Paid Money",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ddnis",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "label": "Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wwhyf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Salary",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-19 16:47:46.691428",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Salary",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

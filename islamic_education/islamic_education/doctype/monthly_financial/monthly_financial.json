@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:MF - {salary_date}",
+ "creation": "2024-02-14 14:07:28.528895",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "salary_date",
+  "section_break_mdot9",
+  "info",
+  "total_slary",
+  "column_break_1yile",
+  "total_expence"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_mdot9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "info",
+   "fieldtype": "Small Text",
+   "label": "Info"
+  },
+  {
+   "fieldname": "salary_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Salary Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_slary",
+   "fieldtype": "Currency",
+   "label": "Total Salary",
+   "options": "0.0"
+  },
+  {
+   "fieldname": "column_break_1yile",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_expence",
+   "fieldtype": "Currency",
+   "label": "Total Exp",
+   "options": "0.0"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-17 14:35:06.249579",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Monthly Financial",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "translated_doctype": 1
+}

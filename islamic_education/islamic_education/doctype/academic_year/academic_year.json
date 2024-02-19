@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:academic_year_name",
+ "creation": "2024-02-13 19:05:53.562578",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "academic_year_name",
+  "column_break_us486",
+  "from_date",
+  "to_date",
+  "active_academic_year"
+ ],
+ "fields": [
+  {
+   "fieldname": "academic_year_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_us486",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "active_academic_year",
+   "fieldtype": "Check",
+   "label": "Is This Year",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-13 19:12:26.359928",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Academic Year",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "academic_year_name",
+ "translated_doctype": 1
+}

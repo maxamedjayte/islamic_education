@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "JU-.####",
+ "creation": "2024-02-13 21:59:00.068255",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student_name",
+  "classe",
+  "column_break_hzfwx",
+  "gender",
+  "phone_number",
+  "column_break_mfbfe",
+  "the_parent",
+  "registration_date",
+  "section_break_hhgoh",
+  "place_of_birth",
+  "mothers_name",
+  "column_break_jmy8q",
+  "date_of_birth",
+  "profile_image"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "classe",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Class",
+   "options": "Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hzfwx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\u0630\u0643\u0631\n\u0623\u0646\u062b\u064a"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "column_break_mfbfe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "the_parent",
+   "fieldtype": "Link",
+   "label": "Parent",
+   "options": "Parent"
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Date of registration"
+  },
+  {
+   "fieldname": "section_break_hhgoh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mothers_name",
+   "fieldtype": "Data",
+   "label": "Mother's name"
+  },
+  {
+   "fieldname": "column_break_jmy8q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of birth"
+  },
+  {
+   "fieldname": "profile_image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Picture"
+  },
+  {
+   "fieldname": "place_of_birth",
+   "fieldtype": "Data",
+   "label": "Place of birth"
+  }
+ ],
+ "image_field": "profile_image",
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Student Information",
+   "link_doctype": "Student Log",
+   "link_fieldname": "the_student"
+  }
+ ],
+ "modified": "2024-02-14 18:56:56.091491",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Student",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "student_name",
+ "translated_doctype": 1
+}

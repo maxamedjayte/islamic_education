@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{class_name} - {academic_year}",
+ "creation": "2024-02-13 19:14:17.910148",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "class_name",
+  "column_break_x9jvc",
+  "academic_year",
+  "student_counts",
+  "section_break_jheka",
+  "info"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "class_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Class Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_x9jvc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "student_counts",
+   "fieldtype": "Int",
+   "label": "Count",
+   "options": "0",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_jheka",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "info",
+   "fieldtype": "Long Text",
+   "label": "Info"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-13 21:49:53.493390",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Class",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "class_name",
+ "translated_doctype": 1
+}

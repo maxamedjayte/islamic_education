@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ATTEND-.#####",
+ "creation": "2024-02-19 19:26:21.395484",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "week",
+  "day",
+  "period",
+  "present"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student"
+  },
+  {
+   "fieldname": "week",
+   "fieldtype": "Link",
+   "label": "Week ",
+   "options": "Attend Week"
+  },
+  {
+   "fieldname": "day",
+   "fieldtype": "Data",
+   "label": "Day",
+   "options": "Day"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Int",
+   "label": "Period"
+  },
+  {
+   "default": "0",
+   "fieldname": "present",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Present",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-19 19:26:21.395484",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Attendance",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "student",
+ "translated_doctype": 1
+}

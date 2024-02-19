@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-13 22:28:29.771829",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "the_student",
+  "column_break_pdvcq",
+  "datetime",
+  "status",
+  "section_break_9lulb",
+  "info"
+ ],
+ "fields": [
+  {
+   "fieldname": "the_student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Note title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "info",
+   "fieldtype": "Long Text",
+   "label": "Info"
+  },
+  {
+   "fieldname": "datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "TIme",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "status",
+   "fieldtype": "Check",
+   "label": "Solved"
+  },
+  {
+   "fieldname": "column_break_pdvcq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_9lulb",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-13 22:30:26.242315",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Student Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "the_student",
+ "translated_doctype": 1
+}
