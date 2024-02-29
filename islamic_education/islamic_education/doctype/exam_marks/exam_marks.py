@@ -5,7 +5,6 @@ import frappe
 from frappe.model.document import Document
 
 class ExamMarks(Document):
-	pass
 	
 	def before_save(self):
 		exam_announcement = frappe.get_value("Exam Announcement", self.exam_announcement, "exam_type")

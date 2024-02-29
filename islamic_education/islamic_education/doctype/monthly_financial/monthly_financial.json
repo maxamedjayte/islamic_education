@@ -9,9 +9,10 @@
  "engine": "InnoDB",
  "field_order": [
   "salary_date",
-  "section_break_mdot9",
+  "column_break_ybnlj",
   "info",
-  "total_slary",
+  "section_break_mdot9",
+  "total_salary",
   "column_break_1yile",
   "total_expence"
  ],
@@ -23,20 +24,17 @@
   {
    "fieldname": "info",
    "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Info"
   },
   {
    "fieldname": "salary_date",
    "fieldtype": "Date",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Salary Date",
    "reqd": 1
-  },
-  {
-   "fieldname": "total_slary",
-   "fieldtype": "Currency",
-   "label": "Total Salary",
-   "options": "0.0"
   },
   {
    "fieldname": "column_break_1yile",
@@ -45,13 +43,36 @@
   {
    "fieldname": "total_expence",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Total Exp",
-   "options": "0.0"
+   "options": "0.0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ybnlj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_salary",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Salary",
+   "options": "0.0",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-02-17 14:35:06.249579",
+ "links": [
+  {
+   "link_doctype": "Salary",
+   "link_fieldname": "salary_month"
+  },
+  {
+   "link_doctype": "Expense",
+   "link_fieldname": "expense_month"
+  }
+ ],
+ "modified": "2024-02-20 09:09:27.679661",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Monthly Financial",

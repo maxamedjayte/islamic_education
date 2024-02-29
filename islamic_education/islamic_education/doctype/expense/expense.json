@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{expense_month} - {expense_name}",
  "creation": "2024-02-17 17:27:10.337022",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,8 +10,8 @@
  "field_order": [
   "expense_month",
   "column_break_fzwrz",
-  "expence_name",
-  "price",
+  "expense_name",
+  "amount",
   "amended_from"
  ],
  "fields": [
@@ -21,16 +22,6 @@
    "label": "Expense Month",
    "options": "Monthly Financial",
    "reqd": 1
-  },
-  {
-   "fieldname": "expence_name",
-   "fieldtype": "Data",
-   "label": "Expance Name"
-  },
-  {
-   "fieldname": "price",
-   "fieldtype": "Currency",
-   "label": "Price"
   },
   {
    "fieldname": "amended_from",
@@ -45,15 +36,29 @@
   {
    "fieldname": "column_break_fzwrz",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "expense_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Expanse Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-17 17:30:26.484545",
+ "modified": "2024-02-20 10:11:41.995551",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Expense",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

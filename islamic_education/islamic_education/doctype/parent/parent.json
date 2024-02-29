@@ -46,8 +46,13 @@
  ],
  "image_field": "image",
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-02-13 21:53:26.691274",
+ "links": [
+  {
+   "link_doctype": "Student",
+   "link_fieldname": "the_parent"
+  }
+ ],
+ "modified": "2024-02-19 20:55:07.150977",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Parent",

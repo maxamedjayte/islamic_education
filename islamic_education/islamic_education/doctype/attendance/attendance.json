@@ -8,48 +8,92 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "student",
+  "attending_the_classes",
+  "section_break_wmx9p",
+  "class",
+  "column_break_l0pep",
   "week",
+  "column_break_c9mne",
   "day",
+  "amended_from",
   "period",
-  "present"
+  "section_break_t8mex",
+  "attending_table"
  ],
  "fields": [
   {
-   "fieldname": "student",
-   "fieldtype": "Link",
-   "label": "Student",
-   "options": "Student"
-  },
-  {
    "fieldname": "week",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Week ",
-   "options": "Attend Week"
+   "options": "Attend Week",
+   "reqd": 1
   },
   {
    "fieldname": "day",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Day",
-   "options": "Day"
+   "options": "Day",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attending_the_classes",
+   "fieldtype": "Heading",
+   "label": "ATTENDING THE CLASS"
+  },
+  {
+   "fieldname": "class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Class",
+   "options": "Class",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_l0pep",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_c9mne",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wmx9p",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Attendance",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_t8mex",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attending_table",
+   "fieldtype": "Table",
+   "label": "ATTENDING",
+   "options": "Attending Table"
   },
   {
    "fieldname": "period",
-   "fieldtype": "Int",
-   "label": "Period"
-  },
-  {
-   "default": "0",
-   "fieldname": "present",
-   "fieldtype": "Check",
-   "in_list_view": 1,
-   "label": "Present",
+   "fieldtype": "Select",
+   "label": "Period",
+   "read_only": 1,
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2024-02-19 19:26:21.395484",
+ "modified": "2024-02-25 14:28:43.761746",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Attendance",
@@ -73,6 +117,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "student",
+ "title_field": "class",
  "translated_doctype": 1
 }

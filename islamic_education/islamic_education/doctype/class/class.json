@@ -11,9 +11,12 @@
   "class_name",
   "column_break_x9jvc",
   "academic_year",
+  "section_break_hucnw",
   "student_counts",
   "section_break_jheka",
-  "info"
+  "info",
+  "section_break_d3po7",
+  "class_period"
  ],
  "fields": [
   {
@@ -47,17 +50,40 @@
   },
   {
    "fieldname": "section_break_jheka",
-   "fieldtype": "Section Break"
+   "fieldtype": "Column Break"
   },
   {
    "fieldname": "info",
-   "fieldtype": "Long Text",
+   "fieldtype": "Small Text",
    "label": "Info"
+  },
+  {
+   "fieldname": "section_break_d3po7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "class_period",
+   "fieldtype": "Table",
+   "label": "PERIODS",
+   "options": "Class Period"
+  },
+  {
+   "fieldname": "section_break_hucnw",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-02-13 21:49:53.493390",
+ "links": [
+  {
+   "link_doctype": "Student",
+   "link_fieldname": "classe"
+  },
+  {
+   "link_doctype": "Subject",
+   "link_fieldname": "the_classe"
+  }
+ ],
+ "modified": "2024-02-20 08:29:20.784588",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Class",

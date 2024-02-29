@@ -5,4 +5,8 @@
 from frappe.model.document import Document
 
 class Worker(Document):
-	pass
+    # after save
+    def after_insert(self):
+        # employee_name = first name + last name 
+        self.employee_name  = self.first_name +" " + self.middle_name + " " + self.last_name
+        self.save()

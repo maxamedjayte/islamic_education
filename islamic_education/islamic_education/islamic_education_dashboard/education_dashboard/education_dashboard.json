@@ -1,0 +1,40 @@
+{
+ "cards": [
+  {
+   "card": "Student Count"
+  },
+  {
+   "card": "Number of boys"
+  },
+  {
+   "card": "Number of girls"
+  },
+  {
+   "card": "Class"
+  },
+  {
+   "card": "Subject Count"
+  },
+  {
+   "card": "Academic Year Count"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Student Registration",
+   "width": "Half"
+  }
+ ],
+ "creation": "2024-02-19 15:08:35.976007",
+ "dashboard_name": "Education Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2024-02-21 07:19:40.707066",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Education Dashboard",
+ "owner": "Administrator"
+}
