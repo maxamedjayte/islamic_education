@@ -7,7 +7,8 @@
  "engine": "InnoDB",
  "field_order": [
   "student",
-  "present"
+  "present",
+  "note"
  ],
  "fields": [
   {
@@ -23,18 +24,25 @@
    "reqd": 1
   },
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "present",
    "fieldtype": "Check",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Persent"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Note"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-02-20 07:47:23.098466",
+ "modified": "2024-03-03 11:49:24.522542",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Attending Table",

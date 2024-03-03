@@ -15,3 +15,15 @@ def get_class_periods(the_class, day):
 	# this classe.class_period list of dict i want to filter where day = day
 	
 	return classe.class_period
+
+
+
+@frappe.whitelist()
+def delete_attendance(attendance_id):
+	exam = frappe.get_doc("Attendance", attendance_id)
+	for i in exam.attending_table:
+		# clear this child table
+		i.delete()
+		frappe.db.commit()
+	return "Attendance Deleted Successfully"
+
