@@ -42,11 +42,11 @@
    "reqd": 1
   },
   {
+   "default": "0",
    "fieldname": "student_counts",
    "fieldtype": "Int",
    "label": "Count",
-   "options": "0",
-   "reqd": 1
+   "options": "0"
   },
   {
    "fieldname": "section_break_jheka",
@@ -83,7 +83,7 @@
    "link_fieldname": "the_classe"
   }
  ],
- "modified": "2024-02-20 08:29:20.784588",
+ "modified": "2024-03-04 16:18:26.605114",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Class",

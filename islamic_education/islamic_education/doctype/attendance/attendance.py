@@ -9,11 +9,9 @@ class Attendance(Document):
 
 
 @frappe.whitelist()
-def get_class_periods(the_class, day):
+def get_class_periods(the_class):
 	# get class
 	classe = frappe.get_doc("Class", the_class)
-	# this classe.class_period list of dict i want to filter where day = day
-	
 	return classe.class_period
 
 

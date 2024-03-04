@@ -94,6 +94,10 @@ frappe.ui.form.on('Attendance', {
 			});
 		}
 	},
+	// validation
+	validation: function (frm) {
+		
+	},
 	day: function (frm) {
 
 		// get the class from the form
@@ -103,8 +107,7 @@ frappe.ui.form.on('Attendance', {
 		frappe.call({
 			method: "islamic_education.islamic_education.doctype.attendance.attendance.get_class_periods",
 			args: {
-				the_class: the_class,
-				day: day
+				the_class: the_class
 			},
 			callback: function (r) {
 				if (!r.exc) {
@@ -115,7 +118,9 @@ frappe.ui.form.on('Attendance', {
 					console.log(periods);
 					// Build options based on fetched data
 					periods.forEach(function (period, index) {
-						options.push(period.subject_name + ' - ' + period.period_time);
+						if (period.day==day) {
+							options.push(period.subject_name + ' - ' + period.period_time);
+						}
 					});
 					// Set options to the select field
 					frm.set_df_property('period', 'options', options.join('\n'));

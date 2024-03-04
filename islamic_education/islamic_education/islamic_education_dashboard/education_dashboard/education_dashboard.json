@@ -23,6 +23,10 @@
   {
    "chart": "Student Registration",
    "width": "Half"
+  },
+  {
+   "chart": "Class Student",
+   "width": "Half"
   }
  ],
  "creation": "2024-02-19 15:08:35.976007",
@@ -32,7 +36,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2024-02-21 07:19:40.707066",
+ "modified": "2024-03-04 14:37:45.666859",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Education Dashboard",
