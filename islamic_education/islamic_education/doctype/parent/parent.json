@@ -35,6 +35,8 @@
   {
    "fieldname": "parent_number",
    "fieldtype": "Phone",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Phone Number"
   },
   {
@@ -52,7 +54,7 @@
    "link_fieldname": "the_parent"
   }
  ],
- "modified": "2024-02-19 20:55:07.150977",
+ "modified": "2024-04-08 10:58:56.349644",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Parent",
@@ -72,6 +74,7 @@
    "write": 1
   }
  ],
+ "show_preview_popup": 1,
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",

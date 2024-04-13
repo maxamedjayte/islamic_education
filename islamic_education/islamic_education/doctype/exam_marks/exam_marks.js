@@ -139,8 +139,7 @@ frappe.ui.form.on("Exam Marks", {
 		frm.set_query("subject", function () {
 			return {
 				filters: {
-					the_classe: frm.doc.the_class,
-					expired:0
+					the_classe: frm.doc.the_class
 				},
 			};
 		});

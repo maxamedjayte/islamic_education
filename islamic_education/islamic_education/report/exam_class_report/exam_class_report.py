@@ -5,7 +5,7 @@ def get_columns(filters=None):
         {"label": "الطالاب", "fieldname": "student", "fieldtype": "Link", "options": "Student", "width": 200},
     ]
 
-    subjects = frappe.get_all("Subject", fields=["name", "subject_name"])
+    subjects = frappe.get_all("Subject",filters={"the_classe": filters.get("the_class")}, fields=["name", "subject_name"])
     for subject in subjects:
         columns.append({"label": subject.subject_name, "fieldname": subject.name, "fieldtype": "Float", "width": 100})
 
@@ -21,7 +21,7 @@ def execute(filters=None):
     for student in students:
         subject_total = 0
         row = {"student": student.student_name}
-        subjects = frappe.get_all("Subject", fields=["name", "subject_name"])
+        subjects = frappe.get_all("Subject",filters={"the_classe": filters.get("the_class")}, fields=["name", "subject_name"])
         for subject in subjects:
             # Get the marks of the student for the subject
             exam_marks = frappe.get_all("Exam Marks", filters={"subject": subject.name,"exam_announcement":filters.get("the_exam")}, fields=["name"])
