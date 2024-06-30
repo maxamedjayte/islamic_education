@@ -170,12 +170,12 @@
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
+   "is_query_report": 1,
    "label": "Exam Marks Rerpot",
    "link_count": 0,
    "link_to": "Exam Class Report",
    "link_type": "Report",
-   "onboard": 0,
+   "onboard": 1,
    "type": "Link"
   },
   {
@@ -219,7 +219,7 @@
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
+   "is_query_report": 1,
    "label": "Attendance Rerport ",
    "link_count": 0,
    "link_to": "Attendance Report",
@@ -228,7 +228,7 @@
    "type": "Link"
   }
  ],
- "modified": "2024-03-04 18:47:07.226953",
+ "modified": "2024-06-30 17:08:46.681710",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Study Managment",

@@ -25,13 +25,26 @@
    "in_filter": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "The Exam",
+   "label": "Exam Annoucement",
    "options": "Exam Announcement",
    "reqd": 1
   },
   {
    "fieldname": "column_break_wt29j",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "student.classe",
+   "fieldname": "the_class",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Class",
+   "options": "Class",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_lqgsy",
@@ -59,37 +72,6 @@
    "options": "Exam Entry Marks"
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Exam Marks",
-   "print_hide": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Exam Marks",
-   "print_hide": 1,
-   "read_only": 1
-  },
-  {
-   "fetch_from": "student.classe",
-   "fieldname": "the_class",
-   "fieldtype": "Link",
-   "in_filter": 1,
-   "in_global_search": 1,
-   "in_list_view": 1,
-   "in_preview": 1,
-   "in_standard_filter": 1,
-   "label": "Class",
-   "options": "Class",
-   "reqd": 1
-  },
-  {
    "bold": 1,
    "fieldname": "exam_info",
    "fieldtype": "Data",
@@ -98,12 +80,21 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Info"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Exam Marks",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-14 23:12:35.354618",
+ "modified": "2024-06-30 12:11:28.269427",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Exam Marks",

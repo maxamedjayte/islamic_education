@@ -145,4 +145,3 @@ frappe.ui.form.on("Exam Marks", {
 		});
 	},
 });
-

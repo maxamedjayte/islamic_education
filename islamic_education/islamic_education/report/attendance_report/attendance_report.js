@@ -14,19 +14,19 @@ frappe.query_reports["Attendance Report"] = {
         },
 		{
             "fieldname": "the_week",
-            "label": __("Day"),
+            "label": __("Week"),
             "fieldtype": "Link",
             "options": "Attend Week",
             "reqd": 1,
             "width":"300px",
         },
-		{
-            "fieldname": "the_day",
-            "label": __("Day"),
-            "fieldtype": "Link",
-            "options": "Day",
-            "reqd": 1,
-            "width":"300px",
-        },
+		// {
+        //     "fieldname": "the_day",
+        //     "label": __("Day"),
+        //     "fieldtype": "Link",
+        //     "options": "Day",
+        //     "reqd": 1,
+        //     "width":"300px",
+        // },
 	]
 };

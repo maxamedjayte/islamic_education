@@ -35,8 +35,13 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-02-19 19:04:39.792587",
+ "links": [
+  {
+   "link_doctype": "Attendance",
+   "link_fieldname": "week"
+  }
+ ],
+ "modified": "2024-06-30 12:04:34.365230",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Attend Week",

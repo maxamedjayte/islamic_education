@@ -6,3 +6,16 @@ frappe.ui.form.on('Class', {
 
 	// }
 });
+
+// Inside a client-side script file or form script
+frappe.call({
+    method: "islamic_education.doctype.class.class.redirect_to_year",
+    args: {
+        "academic_year": "2024-2025"
+    },
+    callback: function(r) {
+        if (!r.exc) {
+            window.location.href = r.message;
+        }
+    }
+});

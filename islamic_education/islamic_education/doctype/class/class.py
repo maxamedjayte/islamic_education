@@ -16,5 +16,13 @@ def update_student_counts():
 
 
 class Class(Document):
-	update_student_counts()
-	pass
+    def before_save(self):
+	    update_student_counts()
+
+
+@frappe.whitelist()
+def redirect_to_year(academic_year):
+    print(' aaaaaaaa')
+    # You can perform any necessary server-side checks or processing here
+    frappe.local.response["type"] = "redirect"
+    frappe.local.response["location"] = "/app/class-list?academic_year=" + academic_year

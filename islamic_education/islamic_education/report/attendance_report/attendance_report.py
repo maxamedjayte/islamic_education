@@ -7,9 +7,13 @@ def get_columns(filters=None):
 	columns = [
 		{"label": "الطالاب", "fieldname": "student", "fieldtype": "Link", "options": "Student", "width": 200},
 	]
-	the_class = frappe.get_doc("Class", filters.get("the_class"))
-	for period in the_class.class_period:
-		columns.append({"label": period.subject_name +'-'+ period.period_time, "fieldname": period.name, "fieldtype": "Data", "width": 100})	
+	days = frappe.get_all("Day")
+	for day in days:
+		columns.append({"label": day.name,"fieldname": day.name, "fieldtype": "Link","options": "Day", "width": 100})
+		the_class = frappe.get_doc("Class", filters.get("the_class"))
+		for period in the_class.class_period:
+			columns.append({"label": period.subject_name +'-'+ period.period_time, "fieldname": period.name, "fieldtype": "Data", "width": 100})	
+	
 	return columns
 
 def execute(filters=None):

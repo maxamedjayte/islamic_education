@@ -44,16 +44,24 @@
    "reqd": 1
   },
   {
+   "bold": 1,
    "default": "0",
    "fieldname": "active_academic_year",
    "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Is This Year",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-02-20 08:30:28.234881",
+ "links": [
+  {
+   "link_doctype": "Class",
+   "link_fieldname": "academic_year"
+  }
+ ],
+ "modified": "2024-05-28 20:31:02.660144",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Academic Year",
