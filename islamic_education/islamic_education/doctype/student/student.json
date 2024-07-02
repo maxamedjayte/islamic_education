@@ -8,6 +8,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "status",
+  "section_break_jtftz",
   "student_name",
   "classe",
   "column_break_hzfwx",
@@ -99,6 +101,20 @@
    "fieldname": "place_of_birth",
    "fieldtype": "Data",
    "label": "Place of birth"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nPending\nDisable\nDeleted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_jtftz",
+   "fieldtype": "Section Break"
   }
  ],
  "image_field": "profile_image",
@@ -110,7 +126,7 @@
    "link_fieldname": "the_student"
   }
  ],
- "modified": "2024-02-14 18:56:56.091491",
+ "modified": "2024-07-02 10:09:43.059193",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Student",

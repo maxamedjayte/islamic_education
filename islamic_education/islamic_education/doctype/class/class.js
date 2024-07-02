@@ -2,20 +2,17 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Class', {
-	// refresh: function(frm) {
-
-	// }
+	refresh: function(frm) {
+		// filter the academic year based on the selected academic term
+		frm.set_query("academic_year", function() {
+			return {
+				"filters": {
+					"active_academic_year": 1
+				}
+			};
+		}
+	);
+	}
 });
 
-// Inside a client-side script file or form script
-frappe.call({
-    method: "islamic_education.doctype.class.class.redirect_to_year",
-    args: {
-        "academic_year": "2024-2025"
-    },
-    callback: function(r) {
-        if (!r.exc) {
-            window.location.href = r.message;
-        }
-    }
-});
+

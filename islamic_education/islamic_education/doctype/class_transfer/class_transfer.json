@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-01 11:56:04.266651",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "from_class",
+  "column_break_3n3ys",
+  "fr_academic_year",
+  "fr_student_count",
+  "section_break_1sls8",
+  "to_class",
+  "column_break_8pza1",
+  "to_academic_year",
+  "to_student_count",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "From Class",
+   "options": "Class",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "from_class.student_counts",
+   "fieldname": "fr_student_count",
+   "fieldtype": "Read Only",
+   "label": "Fr Student Count"
+  },
+  {
+   "fieldname": "section_break_1sls8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "to_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "To Class",
+   "options": "Class",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "to_class.student_counts",
+   "fieldname": "to_student_count",
+   "fieldtype": "Data",
+   "label": "To Student Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3n3ys",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_8pza1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Class Transfer",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "from_class.academic_year",
+   "fieldname": "fr_academic_year",
+   "fieldtype": "Read Only",
+   "label": "Fr Academic Year"
+  },
+  {
+   "fetch_from": "to_class.academic_year",
+   "fieldname": "to_academic_year",
+   "fieldtype": "Read Only",
+   "label": "To Academic Year"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-07-01 14:51:14.714948",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Class Transfer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "to_class"
+}
