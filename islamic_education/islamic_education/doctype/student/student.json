@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "JU-.####",
+ "autoname": "format:MU-{YY}-###",
  "creation": "2024-02-13 21:59:00.068255",
  "default_view": "List",
  "doctype": "DocType",
@@ -133,15 +133,15 @@
  "links": [
   {
    "group": "Student Information",
-   "link_doctype": "Student Log",
+   "link_doctype": "Student Note",
    "link_fieldname": "the_student"
   }
  ],
- "modified": "2024-07-10 22:05:49.229290",
+ "modified": "2024-07-11 11:05:59.418802",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Student",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
