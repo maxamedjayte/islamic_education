@@ -1,16 +1,16 @@
 {
  "charts": [],
- "content": "[{\"id\":\"TiNPQwXWax\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">WORKERS MANAGMENT<br></span>\",\"col\":9}},{\"id\":\"qN_LxHBXbc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"DASHBOARD\",\"col\":3}},{\"id\":\"cUhjBH_pHo\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Workers Count\",\"col\":4}},{\"id\":\"T3Xsj5fUF7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oxMEOKQyVO\",\"type\":\"card\",\"data\":{\"card_name\":\"Finanacial\",\"col\":4}},{\"id\":\"RCSkoQhA4y\",\"type\":\"card\",\"data\":{\"card_name\":\"Expences\",\"col\":4}}]",
+ "content": "[{\"id\":\"TiNPQwXWax\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">FINANCIAL MANAGMENT<br></span>\",\"col\":9}},{\"id\":\"qN_LxHBXbc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"DASHBOARD\",\"col\":3}},{\"id\":\"cUhjBH_pHo\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Workers Count\",\"col\":4}},{\"id\":\"T3Xsj5fUF7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oxMEOKQyVO\",\"type\":\"card\",\"data\":{\"card_name\":\"Finanacial\",\"col\":4}},{\"id\":\"RCSkoQhA4y\",\"type\":\"card\",\"data\":{\"card_name\":\"Expences\",\"col\":4}}]",
  "creation": "2024-02-19 15:06:56.487867",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "crm",
+ "icon": "milestone",
  "idx": 0,
  "is_hidden": 0,
- "label": "Financial",
+ "label": "Financial Managment",
  "links": [
   {
    "hidden": 0,
@@ -61,10 +61,10 @@
    "type": "Link"
   }
  ],
- "modified": "2024-02-22 18:16:03.179635",
+ "modified": "2024-07-06 05:45:00.457656",
  "modified_by": "Administrator",
  "module": "Islamic Education",
- "name": "Financial",
+ "name": "Financial Managment",
  "number_cards": [
   {
    "label": "Workers Count",
@@ -76,7 +76,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 13.0,
+ "sequence_id": 14.0,
  "shortcuts": [
   {
    "color": "Grey",
@@ -86,5 +86,5 @@
    "type": "Dashboard"
   }
  ],
- "title": "Financial"
+ "title": "Financial Managment"
 }

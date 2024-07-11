@@ -9,9 +9,11 @@
  "engine": "InnoDB",
  "field_order": [
   "expense_month",
-  "column_break_fzwrz",
+  "section_break_fyxsq",
   "expense_name",
+  "column_break_fzwrz",
   "amount",
+  "info",
   "amended_from"
  ],
  "fields": [
@@ -21,17 +23,8 @@
    "in_list_view": 1,
    "label": "Expense Month",
    "options": "Monthly Financial",
-   "reqd": 1
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Expense",
-   "print_hide": 1,
    "read_only": 1,
-   "search_index": 1
+   "reqd": 1
   },
   {
    "fieldname": "column_break_fzwrz",
@@ -49,12 +42,31 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Expanse Name"
+  },
+  {
+   "fieldname": "section_break_fyxsq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "info",
+   "fieldtype": "Long Text",
+   "label": "Info"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Expense",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-20 10:11:41.995551",
+ "modified": "2024-07-02 22:18:12.551012",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Expense",

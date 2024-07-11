@@ -59,9 +59,13 @@
   {
    "link_doctype": "Class",
    "link_fieldname": "academic_year"
+  },
+  {
+   "link_doctype": "Student",
+   "link_fieldname": "academic_year"
   }
  ],
- "modified": "2024-05-28 20:31:02.660144",
+ "modified": "2024-07-11 10:53:01.375140",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Academic Year",
@@ -81,10 +85,9 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
+ "search_fields": "from_date,to_date",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "academic_year_name",
  "translated_doctype": 1
 }

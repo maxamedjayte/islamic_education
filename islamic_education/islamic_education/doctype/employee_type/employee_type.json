@@ -1,38 +1,42 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:exam_name",
- "creation": "2024-02-13 23:06:11.084986",
+ "creation": "2024-07-02 22:29:38.568639",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "exam_name",
-  "exam_month"
+  "type",
+  "column_break_tb4kj",
+  "info"
  ],
  "fields": [
   {
-   "fieldname": "exam_name",
+   "fieldname": "type",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Exam name",
-   "reqd": 1,
-   "unique": 1
+   "label": "Type",
+   "reqd": 1
   },
   {
-   "fieldname": "exam_month",
+   "fieldname": "column_break_tb4kj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "info",
    "fieldtype": "Data",
-   "label": "Exam Month"
+   "in_list_view": 1,
+   "label": "Info",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-11 11:01:55.535456",
+ "modified": "2024-07-02 22:30:33.727106",
  "modified_by": "Administrator",
  "module": "Islamic Education",
- "name": "Exam Types",
- "naming_rule": "By fieldname",
+ "name": "Employee Type",
  "owner": "Administrator",
  "permissions": [
   {
@@ -48,10 +52,8 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "exam_name",
  "translated_doctype": 1
 }

@@ -12,6 +12,7 @@
   "section_break_jtftz",
   "student_name",
   "classe",
+  "academic_year",
   "column_break_hzfwx",
   "gender",
   "phone_number",
@@ -115,6 +116,16 @@
   {
    "fieldname": "section_break_jtftz",
    "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "classe.academic_year",
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Academic Year",
+   "options": "Academic Year"
   }
  ],
  "image_field": "profile_image",
@@ -126,7 +137,7 @@
    "link_fieldname": "the_student"
   }
  ],
- "modified": "2024-07-02 10:09:43.059193",
+ "modified": "2024-07-10 22:05:49.229290",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Student",
@@ -146,6 +157,7 @@
    "write": 1
   }
  ],
+ "search_fields": "classe,gender",
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",

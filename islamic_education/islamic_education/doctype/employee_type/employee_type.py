@@ -4,8 +4,5 @@
 # import frappe
 from frappe.model.document import Document
 
-class Salary(Document):
-	def before_Save(self):
-		self.balance = self.salary - self.paided
-		
-
+class EmployeeType(Document):
+	pass

@@ -2,6 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "JUP-.###",
+ "color": "#66398f",
  "creation": "2024-02-13 21:53:26.691274",
  "default_view": "List",
  "doctype": "DocType",
@@ -54,7 +55,7 @@
    "link_fieldname": "the_parent"
   }
  ],
- "modified": "2024-04-08 10:58:56.349644",
+ "modified": "2024-07-11 10:57:51.233875",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Parent",

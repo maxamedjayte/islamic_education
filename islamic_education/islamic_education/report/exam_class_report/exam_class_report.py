@@ -15,7 +15,7 @@ def get_columns(filters=None):
 def execute(filters=None):
     columns = get_columns(filters)
     data = []
-
+    
     # get student with this class
     students = frappe.get_all("Student", filters={"classe": filters.get("the_class")}, fields=["name", "student_name"])
     for student in students:

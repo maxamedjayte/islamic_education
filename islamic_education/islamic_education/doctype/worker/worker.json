@@ -136,6 +136,8 @@
   {
    "fieldname": "gender",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Gender",
    "oldfieldname": "gender",
    "oldfieldtype": "Select",
@@ -590,7 +592,7 @@
  "icon": "fa fa-user",
  "image_field": "image",
  "links": [],
- "modified": "2024-02-19 18:01:04.958019",
+ "modified": "2024-07-06 05:46:24.581598",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Worker",
@@ -632,8 +634,9 @@
    "write": 1
   }
  ],
- "search_fields": "employee_name",
+ "search_fields": "cell_number",
  "show_name_in_global_search": 1,
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

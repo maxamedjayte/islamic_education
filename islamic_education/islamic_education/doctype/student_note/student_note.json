@@ -28,7 +28,7 @@
    "fieldname": "title",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Note title",
+   "label": "Note Title",
    "reqd": 1
   },
   {
@@ -40,7 +40,7 @@
    "fieldname": "datetime",
    "fieldtype": "Datetime",
    "in_list_view": 1,
-   "label": "TIme",
+   "label": "Time",
    "reqd": 1
   },
   {
@@ -60,10 +60,10 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-13 22:30:26.242315",
+ "modified": "2024-07-11 10:44:04.027274",
  "modified_by": "Administrator",
  "module": "Islamic Education",
- "name": "Student Log",
+ "name": "Student Note",
  "owner": "Administrator",
  "permissions": [
   {
