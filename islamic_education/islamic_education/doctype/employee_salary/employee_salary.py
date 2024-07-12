@@ -10,7 +10,7 @@ class EmployeeSalary(Document):
 		
 	
     def on_submit(self):
-        frappe.db.set_value("Monthly Financial", self.salary_month, "total_salary", get_total_employee_salary(self.salary_month))
+      frappe.db.set_value("Monthly Financial", self.salary_month, "total_salary", get_total_employee_salary(self.salary_month))
 
 
 
