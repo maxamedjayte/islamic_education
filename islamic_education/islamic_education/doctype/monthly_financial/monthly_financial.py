@@ -6,43 +6,55 @@ from frappe.model.document import Document
 
 class MonthlyFinancial(Document):
     # on refresh
-    
-    monthly_financials = frappe.get_all("Monthly Financial", fields=["*"])
-    for monthly in monthly_financials:
-        # get all expenses
-        expenses = frappe.get_all("Expense", filters={"expense_month": monthly.name}, fields=["*"])
-        # get all salaries
-        salaries = frappe.get_all("Salary", filters={"salary_month": monthly.name}, fields=["*"])
+    pass
+    # monthly_financials = frappe.get_all("Monthly Financial", fields=["*"])
+    # for monthly in monthly_financials:
+    #     # get all expenses
+    #     expenses = frappe.get_all("Expense", filters={"expense_month": monthly.name}, fields=["*"])
+    #     # get all salaries
+    #     salaries = frappe.get_all("Employee Salary", filters={"salary_month": monthly.name}, fields=["*"])
         
-        total_expense = 0
-        total_salary = 0
-        for expense in expenses:
-            print(expense)
-            print(expense.amount)
-            total_expense += expense.amount
-        for salary in salaries:
-            total_salary += salary.paided
+    #     total_expense = 0
+    #     total_salary = 0
+    #     for expense in expenses:
+    #         total_expense += expense.amount
+    #     for salary in salaries:
+    #         total_salary += salary.paid_money
         
-        frappe.db.set_value("Monthly Financial", monthly.name, "total_expence",total_expense)
-        frappe.db.set_value("Monthly Financial", monthly.name, "total_salary",total_salary)
-        frappe.db.commit()
+    #     frappe.db.set_value("Monthly Financial", monthly.name, "total_expence",total_expense)
+    #     frappe.db.set_value("Monthly Financial", monthly.name, "total_salary",total_salary)
+    #     frappe.db.commit()
         
     
 
-    def after_insert(self):
-        # get all employess
-        employees = frappe.get_all("Employee", filters={"status": "Active"}, fields=["*"])
-        for employee in employees:
-            salary = frappe.new_doc("Salary")
-            salary.salary_month=self.name
-            salary.employee = employee.name
-            salary.salary = employee.ctc
-            salary.paided = 0
-            salary.balance = employee.ctc
-            salary.save()
+    # def after_insert(self):
+    #     # get all employess
+    #     employees = frappe.get_all("Employee", filters={"status": "Active"}, fields=["*"])
+    #     for employee in employees:
+    #         salary = frappe.new_doc("Employee Salary")
+    #         salary.salary_month=self.name
+    #         salary.employee = employee.name
+    #         salary.salary = employee.ctc
+    #         salary.paid_money = 0
+    #         salary.balance = employee.ctc
+    #         salary.save()
 
 
 
 @frappe.whitelist()
 def get_monthly_financial():
     return frappe.get_all("Monthly Financial", fields=["*"])
+
+
+@frappe.whitelist()
+def get_total_expence(monthly_financial):
+    result = frappe.db.sql("""SELECT SUM(amount) FROM `tabExpense Task` WHERE expense_month = %s AND docstatus = 1""", (monthly_financial,), as_list=True)
+    total_expence = result[0][0] if result and result[0][0] is not None else 0
+    return total_expence
+
+
+@frappe.whitelist()
+def get_total_employee_salary(monthly_financial):
+    result = frappe.db.sql("""SELECT SUM(paid_money) FROM `tabExpense Task` WHERE expense_month = %s AND docstatus = 1""", (monthly_financial,), as_list=True)
+    total_expence = result[0][0] if result and result[0][0] is not None else 0
+    return total_expence

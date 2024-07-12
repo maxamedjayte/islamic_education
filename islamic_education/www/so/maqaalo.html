@@ -18,12 +18,16 @@ Wax Qabadka AL-UMMAH
 
     </div>
   </section><!-- End Breadcrumbs -->
+  
   <section id="blog" class="blog">
     <div class="container" data-aos="fade-up">
 
-      <div class="row">
+
 
         <div class="col-lg-12 entries row">
+          {% set blog_posts = frappe.get_all('Blog Post', fields=['title', 'blog_category','blogger','published_on','blog_intro']) %}
+
+          {% for blog in blog_posts %}
           
             <div class="col-4">
                 <article class="entry">
@@ -33,20 +37,19 @@ Wax Qabadka AL-UMMAH
                     </div>
         
                     <h2 class="entry-title">
-                      <a href="blog-single.html">ssimos cumque fuga qui quibusdam quia</a>
+                      <a href="blog-single.html">{{blog.title}}</a>
                     </h2>
         
                     <div class="entry-meta">
                       <ul>
-                        <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                        <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html" class="fw-bold">{{blog.blogger}}</a></li>
+                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="{{blog.published_on}}">{{blog.published_on}}</time></a></li>
                       </ul>
                     </div>
         
                     <div class="entry-content">
                       <p>
-                        Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
-                        Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                     {{blog.blog_intro}} 
                       </p>
                       <div class="read-more">
                         <a href="blog-single.html">Read More</a>
@@ -56,44 +59,11 @@ Wax Qabadka AL-UMMAH
                   </article><!-- End blog entry -->
         
             </div>
-            <div class="col-4">
-                <article class="entry">
-
-                    <div class="entry-img">
-                      <img src="/assets/islamic_education/img/blog/blog-2.jpg" alt="" class="img-fluid">
-                    </div>
-        
-                    <h2 class="entry-title">
-                      <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
-                    </h2>
-        
-                    <div class="entry-meta">
-                      <ul>
-                        <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
-                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                        <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
-                      </ul>
-                    </div>
-        
-                    <div class="entry-content">
-                      <p>
-                        Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
-                        Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
-                      </p>
-                      <div class="read-more">
-                        <a href="blog-single.html">Read More</a>
-                      </div>
-                    </div>
-        
-                  </article><!-- End blog entry -->
-        
-            </div>
-
+          {% endfor %}
+            
 
         </div><!-- End blog entries list -->
 
-   
-      </div>
 
     </div>
   </section><!-- End Blog Section -->

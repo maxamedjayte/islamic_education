@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "JUP-.###",
+ "autoname": "MM-.###",
  "color": "#66398f",
  "creation": "2024-02-13 21:53:26.691274",
  "default_view": "List",
@@ -10,6 +10,7 @@
  "engine": "InnoDB",
  "field_order": [
   "parent_name",
+  "type",
   "student_count",
   "column_break_hjyfi",
   "parent_number",
@@ -25,9 +26,11 @@
    "reqd": 1
   },
   {
+   "default": "1",
    "fieldname": "student_count",
    "fieldtype": "Int",
-   "label": "Count"
+   "label": "Count",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_hjyfi",
@@ -45,6 +48,13 @@
    "fieldtype": "Attach Image",
    "hidden": 1,
    "label": "Picture"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\u0627\u0644\u0643\u0644\n\u0627\u0644\u0645\u062f\u0631\u0633\u0629\n\u0627\u0644\u0645\u0631\u0643\u0632",
+   "translatable": 1
   }
  ],
  "image_field": "image",
@@ -55,7 +65,7 @@
    "link_fieldname": "the_parent"
   }
  ],
- "modified": "2024-07-11 10:57:51.233875",
+ "modified": "2024-07-12 19:39:33.581058",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Parent",
@@ -75,6 +85,7 @@
    "write": 1
   }
  ],
+ "search_fields": "parent_number",
  "show_preview_popup": 1,
  "show_title_field_in_link": 1,
  "sort_field": "modified",

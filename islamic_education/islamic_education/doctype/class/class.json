@@ -13,6 +13,7 @@
   "academic_year",
   "section_break_hucnw",
   "student_counts",
+  "registered_date",
   "section_break_jheka",
   "info",
   "section_break_d3po7",
@@ -72,6 +73,11 @@
   {
    "fieldname": "section_break_hucnw",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "registered_date",
+   "fieldtype": "Date",
+   "label": "Registered Date"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -85,7 +91,7 @@
    "link_fieldname": "the_classe"
   }
  ],
- "modified": "2024-07-10 21:55:22.818809",
+ "modified": "2024-07-11 16:36:08.150108",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Class",
@@ -108,11 +114,8 @@
  ],
  "search_fields": "academic_year,student_counts",
  "show_name_in_global_search": 1,
- "show_preview_popup": 1,
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "class_name",
  "translated_doctype": 1
 }

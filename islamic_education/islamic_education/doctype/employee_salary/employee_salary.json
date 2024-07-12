@@ -18,7 +18,7 @@
   "bank_acc",
   "bank_name",
   "payment_section",
-  "paided",
+  "paid_money",
   "section_break_ttnwr",
   "balance",
   "amended_from"
@@ -65,14 +65,6 @@
    "label": "Payment"
   },
   {
-   "fieldname": "paided",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Paid Money",
-   "reqd": 1
-  },
-  {
    "fieldname": "column_break_ddnis",
    "fieldtype": "Column Break"
   },
@@ -91,7 +83,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Salary",
+   "options": "Employee Salary",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
@@ -120,15 +112,23 @@
   {
    "fieldname": "section_break_ttnwr",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "paid_money",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Paid Money",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-07-06 05:57:30.324721",
+ "modified": "2024-07-11 20:59:30.555791",
  "modified_by": "Administrator",
  "module": "Islamic Education",
- "name": "Salary",
+ "name": "Employee Salary",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

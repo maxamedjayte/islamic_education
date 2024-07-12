@@ -213,3 +213,7 @@ app_license = "MIT"
 # auth_hooks = [
 # 	"islamic_education.auth.validate"
 # ]
+
+website_route_rules = [
+    {"from_route": "/student_detail/<student_id>", "to_route": "student_detail"}
+]

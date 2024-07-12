@@ -212,7 +212,7 @@
    "is_query_report": 0,
    "label": "Student Note",
    "link_count": 0,
-   "link_to": "Student Log",
+   "link_to": "Student Note",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -238,7 +238,7 @@
    "type": "Link"
   }
  ],
- "modified": "2024-07-06 19:24:58.564715",
+ "modified": "2024-07-11 16:48:57.753983",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Study Managment",

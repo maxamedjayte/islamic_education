@@ -104,7 +104,7 @@
    "label": "Place of birth"
   },
   {
-   "default": "Active",
+   "default": "Pending",
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
@@ -132,12 +132,11 @@
  "index_web_pages_for_search": 1,
  "links": [
   {
-   "group": "Student Information",
    "link_doctype": "Student Note",
    "link_fieldname": "the_student"
   }
  ],
- "modified": "2024-07-11 12:01:46.982830",
+ "modified": "2024-07-12 08:27:14.347267",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Student",

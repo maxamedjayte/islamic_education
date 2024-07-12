@@ -12,7 +12,12 @@
   "active_academic_year",
   "column_break_us486",
   "from_date",
-  "to_date"
+  "column_break_ujlsh",
+  "to_date",
+  "section_break_tjkyi",
+  "total_classes",
+  "column_break_zukfu",
+  "total_students"
  ],
  "fields": [
   {
@@ -52,6 +57,28 @@
    "in_standard_filter": 1,
    "label": "Is This Year",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ujlsh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tjkyi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_classes",
+   "fieldtype": "Int",
+   "label": "Total Classes"
+  },
+  {
+   "fieldname": "column_break_zukfu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_students",
+   "fieldtype": "Int",
+   "label": "Total Students"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -65,7 +92,7 @@
    "link_fieldname": "academic_year"
   }
  ],
- "modified": "2024-07-11 10:53:01.375140",
+ "modified": "2024-07-11 14:02:59.681623",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Academic Year",

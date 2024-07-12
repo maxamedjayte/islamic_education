@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"TiNPQwXWax\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">FINANCIAL MANAGMENT<br></span>\",\"col\":9}},{\"id\":\"qN_LxHBXbc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"DASHBOARD\",\"col\":3}},{\"id\":\"cUhjBH_pHo\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Workers Count\",\"col\":4}},{\"id\":\"T3Xsj5fUF7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oxMEOKQyVO\",\"type\":\"card\",\"data\":{\"card_name\":\"Finanacial\",\"col\":4}},{\"id\":\"RCSkoQhA4y\",\"type\":\"card\",\"data\":{\"card_name\":\"Expences\",\"col\":4}}]",
+ "content": "[{\"id\":\"TiNPQwXWax\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">FINANCIAL MANAGMENT<br></span>\",\"col\":9}},{\"id\":\"qN_LxHBXbc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"DASHBOARD\",\"col\":3}},{\"id\":\"cUhjBH_pHo\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"All Employee\",\"col\":3}},{\"id\":\"T3Xsj5fUF7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XJJ3O4_Rpt\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee Info\",\"col\":4}},{\"id\":\"oxMEOKQyVO\",\"type\":\"card\",\"data\":{\"card_name\":\"Finanacial\",\"col\":4}}]",
  "creation": "2024-02-19 15:06:56.487867",
  "custom_blocks": [],
  "docstatus": 0,
@@ -15,8 +15,8 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Expences",
-   "link_count": 1,
+   "label": "Employee Info",
+   "link_count": 3,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -24,9 +24,29 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Expence",
+   "label": "Wroker Type",
    "link_count": 0,
-   "link_to": "Expense",
+   "link_to": "Worker Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee",
+   "link_count": 0,
+   "link_to": "Worker",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Request",
+   "link_count": 0,
+   "link_to": "About Us Settings",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -35,7 +55,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Finanacial",
-   "link_count": 2,
+   "link_count": 3,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -53,21 +73,31 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Workers Salary",
+   "label": "Employee Salary",
    "link_count": 0,
-   "link_to": "Salary",
+   "link_to": "Employee Salary",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Expense",
+   "link_count": 0,
+   "link_to": "Expense",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2024-07-06 05:45:00.457656",
+ "modified": "2024-07-11 16:48:59.634185",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Financial Managment",
  "number_cards": [
   {
-   "label": "Workers Count",
+   "label": "All Employee",
    "number_card_name": "Workers Count"
   }
  ],
@@ -76,7 +106,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 14.0,
+ "sequence_id": 20.0,
  "shortcuts": [
   {
    "color": "Grey",
