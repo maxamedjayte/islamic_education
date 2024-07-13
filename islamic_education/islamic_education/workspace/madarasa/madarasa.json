@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"Yh0LkoUVNO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Madarasa Dashboard</span>\",\"col\":12}},{\"id\":\"zE6z8DMYV3\",\"type\":\"card\",\"data\":{\"card_name\":\"Madarasa\",\"col\":4}}]",
+ "content": "[{\"id\":\"Yh0LkoUVNO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Madarasa Dashboard</span>\",\"col\":12}},{\"id\":\"zE6z8DMYV3\",\"type\":\"card\",\"data\":{\"card_name\":\"Madarasa\",\"col\":4}},{\"id\":\"MAexhpMn8k\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"76XIokCPP5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Dhamaan Ardada\",\"col\":4}},{\"id\":\"hPYV2K4Fhl\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Tirada Wiilasha\",\"col\":4}},{\"id\":\"lPyZUDQ0N5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Tirada Gabdhaha\",\"col\":4}}]",
  "creation": "2024-07-11 16:48:53.127469",
  "custom_blocks": [],
  "docstatus": 0,
@@ -24,7 +24,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Madarsa Student",
+   "label": "Ardada Madarasada",
    "link_count": 0,
    "link_to": "Madarasa Student",
    "link_type": "DocType",
@@ -32,11 +32,24 @@
    "type": "Link"
   }
  ],
- "modified": "2024-07-13 16:23:53.887123",
+ "modified": "2024-07-13 19:03:43.242725",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Madarasa",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "Tirada Wiilasha",
+   "number_card_name": "Madarasa Boys Count"
+  },
+  {
+   "label": "Dhamaan Ardada",
+   "number_card_name": "Madarasa Students Count"
+  },
+  {
+   "label": "Tirada Gabdhaha",
+   "number_card_name": "Madarasa Girls Count"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
