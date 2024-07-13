@@ -7,7 +7,6 @@ class ClassEnrolment(Document):
         student = frappe.get_doc("Student", self.student)
 
         # Retrieve the specific 'student_graduated_class' child to be removed
-        # Assuming there's a unique field or combination of fields that can identify the correct entry
         to_remove = None
         for d in student.get("student_graduated_class"):
             if d.classe == self.classe:
@@ -25,9 +24,8 @@ class ClassEnrolment(Document):
         student = frappe.get_doc("Student", self.student)
         
         # Ensure the Status field is set
-        # You might need to adjust this logic based on your application's rules
         if not student.status:
-            student.status = 'Active'  # Or any other default or calculated status
+            frappe.throw("This student is not active")
 
         # Query current class enrollments excluding the current one if it's an update
         class_enrolments = frappe.get_list("Class Enrolment", 
@@ -44,16 +42,18 @@ class ClassEnrolment(Document):
             if not hasattr(student, 'student_graduated_class'):
                 student.student_graduated_class = []
 
+            # Check if student has a current class set before appending to 'student_graduated_class'
+            if student.classe:
+                student.append("student_graduated_class", {
+                    "classe": self.classe,  # Use the classe from ClassEnrolment, not from Student
+                    "parent": student.name,
+                    "parenttype": "Student",
+                    "parentfield": "student_graduated_class"
+                })
 
-            # Create a new entry in 'student_graduated_class'
-            student.append("student_graduated_class", {
-                "classe": student.classe,
-                "parent": student.name,
-                "parenttype": "Student",
-                "parentfield": "student_graduated_class"
-            })
-
+            # Update student's current class after adding to graduated class
             student.classe = self.classe
+
             # Save changes to the student document
             student.save()
             frappe.db.commit()

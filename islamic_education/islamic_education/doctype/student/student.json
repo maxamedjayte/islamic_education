@@ -112,8 +112,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "Active\nPending\nDisable\nDeleted",
-   "reqd": 1
+   "options": "Active\nPending\nDisable\nDeleted"
   },
   {
    "fieldname": "section_break_jtftz",
@@ -153,7 +152,7 @@
    "link_fieldname": "the_student"
   }
  ],
- "modified": "2024-07-13 10:02:15.949467",
+ "modified": "2024-07-13 11:24:15.372684",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Student",
