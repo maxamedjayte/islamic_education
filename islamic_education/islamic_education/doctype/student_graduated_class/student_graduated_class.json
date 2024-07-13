@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-13 08:19:27.786955",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "classe",
+  "total_mark",
+  "attendance"
+ ],
+ "fields": [
+  {
+   "fieldname": "total_mark",
+   "fieldtype": "Data",
+   "label": "Total Mark"
+  },
+  {
+   "fieldname": "attendance",
+   "fieldtype": "Data",
+   "label": "Attendance"
+  },
+  {
+   "fieldname": "classe",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Class",
+   "options": "Class",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-13 08:25:21.985403",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Student Graduated Class",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
