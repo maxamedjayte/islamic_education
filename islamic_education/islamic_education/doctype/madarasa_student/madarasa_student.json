@@ -8,6 +8,9 @@
  "engine": "InnoDB",
  "field_order": [
   "status",
+  "column_break_o1mo0",
+  "gender",
+  "section_break_1e5sn",
   "student_name",
   "birth_date",
   "parent1",
@@ -22,6 +25,7 @@
    "fieldname": "student_name",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Student Name",
    "reqd": 1,
    "translatable": 1
@@ -37,6 +41,7 @@
    "fieldname": "parent1",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Parent",
    "options": "Parent",
    "reqd": 1
@@ -71,11 +76,28 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Active\nPending\nDeleted"
+  },
+  {
+   "fieldname": "column_break_o1mo0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "\u0630\u0643\u0631",
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Gender",
+   "options": "\u0630\u0643\u0631\n\u0623\u0646\u062b\u064a"
+  },
+  {
+   "fieldname": "section_break_1e5sn",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-11 17:01:41.479910",
+ "modified": "2024-07-13 16:36:26.604923",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Madarasa Student",
@@ -94,7 +116,11 @@
    "write": 1
   }
  ],
+ "search_fields": "parent1",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "student_name",
+ "translated_doctype": 1
 }

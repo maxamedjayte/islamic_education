@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Madarasa \"}}]",
+ "content": "[{\"id\":\"Yh0LkoUVNO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Madarasa Dashboard</span>\",\"col\":12}},{\"id\":\"zE6z8DMYV3\",\"type\":\"card\",\"data\":{\"card_name\":\"Madarasa\",\"col\":4}}]",
  "creation": "2024-07-11 16:48:53.127469",
  "custom_blocks": [],
  "docstatus": 0,
@@ -11,8 +11,28 @@
  "idx": 0,
  "is_hidden": 0,
  "label": "Madarasa",
- "links": [],
- "modified": "2024-07-11 21:27:53.179940",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Madarasa",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Madarsa Student",
+   "link_count": 0,
+   "link_to": "Madarasa Student",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-07-13 16:23:53.887123",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Madarasa",
