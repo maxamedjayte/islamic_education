@@ -27,6 +27,7 @@
    "in_standard_filter": 1,
    "label": "Student",
    "options": "Student",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -90,6 +91,7 @@
    "fetch_from": "student.student_name",
    "fieldname": "student_name",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Student Name"
   },
   {
@@ -100,7 +102,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-13 08:54:54.256231",
+ "modified": "2024-07-13 10:03:53.686907",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Class Enrolment",

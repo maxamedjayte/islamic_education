@@ -2,6 +2,24 @@ import frappe
 from frappe.model.document import Document
 
 class ClassEnrolment(Document):
+    def on_trash(self):
+        # Retrieve the student document
+        student = frappe.get_doc("Student", self.student)
+
+        # Retrieve the specific 'student_graduated_class' child to be removed
+        # Assuming there's a unique field or combination of fields that can identify the correct entry
+        to_remove = None
+        for d in student.get("student_graduated_class"):
+            if d.classe == self.classe:
+                to_remove = d
+                break
+
+        # Check if we found the entry and then remove it
+        if to_remove:
+            student.remove(to_remove)
+            student.save()
+            frappe.db.commit()
+
     def before_save(self):
         # Retrieve the student document
         student = frappe.get_doc("Student", self.student)
@@ -26,6 +44,7 @@ class ClassEnrolment(Document):
             if not hasattr(student, 'student_graduated_class'):
                 student.student_graduated_class = []
 
+
             # Create a new entry in 'student_graduated_class'
             student.append("student_graduated_class", {
                 "classe": student.classe,
@@ -34,6 +53,7 @@ class ClassEnrolment(Document):
                 "parentfield": "student_graduated_class"
             })
 
+            student.classe = self.classe
             # Save changes to the student document
             student.save()
             frappe.db.commit()
