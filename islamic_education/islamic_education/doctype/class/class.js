@@ -12,6 +12,16 @@ frappe.ui.form.on('Class', {
 	// 		};
 	// 	}
 	// );
+
+	frm.fields_dict['class_period'].grid.get_field('subject').get_query = function(doc, cdt, cdn) {
+		var child = locals[cdt][cdn];
+		return {
+			filters: [
+				['the_classe', '=', frm.doc.name] // Ensure this field name and condition match your use case
+			]
+		};
+	};
+
 	}
 });
 
