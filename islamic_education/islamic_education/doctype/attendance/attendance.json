@@ -10,21 +10,26 @@
  "field_order": [
   "attending_the_classes",
   "section_break_wmx9p",
-  "class",
+  "classe",
   "column_break_l0pep",
   "week",
   "column_break_c9mne",
   "day",
   "amended_from",
   "period",
+  "period_time",
   "section_break_t8mex",
-  "attending_table"
+  "student",
+  "student_name",
+  "present",
+  "note"
  ],
  "fields": [
   {
    "fieldname": "week",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Week ",
    "options": "Attend Week",
    "reqd": 1
@@ -41,14 +46,6 @@
    "fieldname": "attending_the_classes",
    "fieldtype": "Heading",
    "label": "ATTENDING THE CLASS"
-  },
-  {
-   "fieldname": "class",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Class",
-   "options": "Class",
-   "reqd": 1
   },
   {
    "fieldname": "column_break_l0pep",
@@ -77,23 +74,54 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "attending_table",
-   "fieldtype": "Table",
-   "label": "ATTENDING",
-   "options": "Attending Table"
-  },
-  {
    "fieldname": "period",
    "fieldtype": "Select",
    "label": "Period",
    "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_time",
+   "fieldtype": "Read Only",
+   "label": "Period Time"
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "label": "Student",
+   "options": "Student"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "label": "Note"
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "label": "Student Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "present",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Present"
+  },
+  {
+   "fieldname": "classe",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Class",
+   "options": "Class",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-02-25 14:28:43.761746",
+ "modified": "2024-07-27 16:29:20.846955",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Attendance",
@@ -117,6 +145,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "class",
+ "title_field": "student_name",
  "translated_doctype": 1
 }

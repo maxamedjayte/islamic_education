@@ -115,11 +115,10 @@ frappe.ui.form.on('Attendance', {
 					// in the class
 					var periods = r.message;
 					var options = [];
-					console.log(periods);
 					// Build options based on fetched data
 					periods.forEach(function (period, index) {
 						if (period.day==day) {
-							options.push(period.subject_name + ' - ' + period.period_time);
+							options.push(period.subject_name);
 						}
 					});
 					// Set options to the select field
@@ -130,5 +129,15 @@ frappe.ui.form.on('Attendance', {
 			}
 		});
 		
-	}
+	},
+	// when period changes update period_time field
+	// period: function (frm) {
+	// 	console.log("\n\n\n\n\n\n\n")
+	// 	console.log(frm.doc.period);
+	// 	// get the class from the form
+	// 	var the_class = frm.doc.class;
+	// 	var period = frm.doc.period;
+	// 	// period table in the class by the day
+		
+	// },
 });
