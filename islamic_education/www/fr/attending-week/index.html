@@ -1,0 +1,227 @@
+{% extends '/www/admin_base.html' %}
+
+{% block title %}
+Attending Students
+{% endblock %}
+
+{% block content %}
+<style>
+    /* Apply Amiri-Bold to the table header and table body */
+    #attend_period_thead,
+    #attend_period_tbody {
+        font-family: 'Amiri', serif;
+        /* Specify 'Amiri' and fall back to a generic serif font if not available */
+        font-weight: 700;
+        /* Ensures the bold style is applied */
+    }
+    
+</style>
+
+<div dir="rtl" class="card">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3"> <!-- Flex container for alignment -->
+            <h5 class="card-title" style="font-family: 'Amiri', serif;font-size: x-large;">تحطير الطلاب </h5>
+            <div>
+                <button id="print_paper" class="btn btn-info"> Print </button> <!-- Save Button -->
+            </div>
+        </div>
+        <form class="row g-3 needs-validation" id="attending-week-form" novalidate>
+            <div class="col-md-6">
+                <label for="class-select" class="form-label">الحلقة</label>
+                <select name="classe" class="form-select" id="class-select" required>
+                    <option selected disabled value="">إختر الحلقة...</option>
+                    {% for cls in classes %}
+                    <option value="{{ cls.name }}">{{ cls.name }}</option>
+                    {% endfor %}
+                </select>
+                <div class="invalid-feedback">Please select a valid class.</div>
+            </div>
+            <div class="col-md-6">
+                <label for="day-select" class="form-label">اليوم</label>
+                <select name="day" class="form-select" id="day-select" required>
+                    <option selected disabled value="">إختر اليوم...</option>
+                    {% for day in days %}
+                    <option value="{{ day.name }}">{{ day.name }}</option>
+                    {% endfor %}
+                </select>
+                <div class="invalid-feedback">Please select a valid day.</div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit"> ابحث المعلومة</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div dir="rtl" class="card">
+    <div class="card-body">
+
+        <div class="d-flex justify-content-between align-items-center mb-3"> <!-- Flex container for alignment -->
+            <h2 class="card-title" style="font-family: 'Amiri', serif; font-size: x-large;">حطور الطلاب</h2>
+            <div>
+                <input type="checkbox" id="check_all"
+                    style="min-height:25px;min-width:25px;margin: 0px;"><!-- Check All Button -->
+                <button id="save_attendance" class="btn btn-success">Save</button> <!-- Save Button -->
+            </div>
+        </div>
+        <hr>
+        <table class="table">
+            <thead id="attend_period_thead" style="font-size: large;" class="thead-dark"></thead>
+            <tbody id="attend_period_tbody"></tbody>
+        </table>
+    </div>
+</div>
+<script>
+    document.getElementById('attending-week-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const classe = document.getElementById('class-select').value;
+        const day = document.getElementById('day-select').value;
+        const submitButton = document.querySelector('.btn-primary');
+
+        if (classe && day) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Loading...';
+
+            try {
+                const response = await fetch(`/api/method/islamic_education.api.get_class_day_periods_with_students`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-Frappe-CSRF-Token': frappe.csrf_token
+                    },
+                    body: JSON.stringify({ classe, day, attend_week: "{{attending_week.name}}" })
+                });
+
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const data = await response.json();
+                let theadHTML = `<tr><th>#</th><th>إسم الطالب</th>`;
+                data.data.class_periods.forEach(period => {
+                    if(period.day_name == day){
+                        theadHTML += `<th>${period.subject_name} <span style="font-size: small"> ${period.period_time}</span></th>`;
+
+                    }
+                });
+                document.getElementById('attend_period_thead').innerHTML = theadHTML + `</tr>`;
+
+                document.getElementById('attend_period_tbody').innerHTML = data.data.students.map((student, index) => {
+                    return `
+                    <tr>
+                        <th scope="row">${index + 1}</th>
+                            <td data-student-id="${student.name}">${student.student_name}</td>  <!-- Now includes a data attribute for the student ID -->
+                            ${data.data.class_periods.map(period => {
+                                if (period.day_name == day) {
+                                    const studentAttendance = data.data.attendance.find(att => att.student === student.name && att.period === period.subject_name);
+                        var isPresent = studentAttendance ? studentAttendance.present : false;
+                        return `<td><input type="checkbox" name="present_${student.name}_${period.name}" ${isPresent ? 'checked' : ''} onChange="handleCheckboxChange(event, '${student.name}', '${period.subject_name}','${classe}','${day}')"></td>`;
+                  
+                                }
+                      }).join('')}
+                        </tr>
+                `;
+                }).join('');
+            } catch (error) {
+                console.error('Fetch error:', error);
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'إبخث المعلومة';
+            }
+        }
+
+
+    });
+
+    function handleCheckboxChange(e, studentName, periodName, classe, day) {
+        console.log(`Checkbox for ${studentName} during ${periodName} was changed to: ${e.target.checked ? 'present' : 'absent'}.`);
+
+        fetch('/api/method/islamic_education.api.attend_student', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'X-Frappe-CSRF-Token': frappe.csrf_token
+            },
+            body: JSON.stringify({
+                student: studentName,
+                period: periodName,
+                present: e.target.checked ? 1 : 0,
+                classe: classe,
+                day: day,
+                attend_week: "{{attending_week.name}}"
+            })
+        })
+            .then(response => response.json())
+            .then(data => console.log('Success:', data))
+            .catch((error) => console.error('Error:', error));
+    }
+
+    document.getElementById('check_all').addEventListener('change', function () {
+        const isChecked = this.checked; // Check the state of the "Check All" checkbox
+        const checkboxes = document.querySelectorAll('#attend_period_tbody input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = isChecked; // Set each checkbox to the same state as "Check All"
+        });
+    });
+
+
+
+    document.getElementById('save_attendance').addEventListener('click', function () {
+        const rows = document.querySelectorAll('#attend_period_tbody tr');
+        let attendance_data = [];
+
+        rows.forEach(row => {
+            const studentCell = row.cells[1]; // The cell where the student's name is displayed
+            const studentName = studentCell.textContent; // The text content is the student's display name
+            const studentId = studentCell.getAttribute('data-student-id'); // Get the student ID from the data attribute
+
+            const checkboxes = row.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach((checkbox, index) => {
+                const periodName = document.getElementById('attend_period_thead').querySelectorAll('th')[index + 2].textContent.split(' ')[0]; // Assuming period name is in the header
+                attendance_data.push({
+                    student_id: studentId,  // Use the unique student ID
+                    class: document.getElementById('class-select').value,
+                    day: document.getElementById('day-select').value,
+                    period: periodName,
+                    present: checkbox.checked?1:0
+                });
+            });
+        });
+
+        console.log(attendance_data)
+
+        // Send the collected data to the server
+        // fetch('/api/method/islamic_education.api.save_attendance', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'Accept': 'application/json',
+        //         'X-Frappe-CSRF-Token': frappe.csrf_token
+        //     },
+        //     body: JSON.stringify({ data: JSON.stringify(attendance_data) })
+        // })
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         if (data.message) {
+        //             console.log('Success:', data.message);
+        //             alert('Attendance saved successfully!');
+        //         } else if (data.error) {
+        //             console.error('Error:', data.error);
+        //             alert('Failed to save attendance.');
+        //         }
+        //     })
+        //     .catch(error => {
+        //         console.error('Fetch error:', error);
+        //         alert('Failed to save attendance.');
+        //     });
+    });
+
+    document.getElementById("print_paper").addEventListener('click', function () {
+        const classe = document.getElementById('class-select').value;
+        const day = document.getElementById('day-select').value;
+        if (classe && day) {
+            window.location.href = '/fr/print/attending-week/{{attending_week.name}}/'+classe
+        }
+    })
+
+</script>
+{% endblock %}
