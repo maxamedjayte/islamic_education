@@ -12,6 +12,8 @@
   "section_break_bxnx0",
   "the_classe",
   "section_break_dkrv2",
+  "kutub_name",
+  "column_break_hhdhp",
   "subject_info"
  ],
  "fields": [
@@ -29,6 +31,7 @@
   {
    "fieldname": "the_classe",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "The Class",
    "options": "Class"
   },
@@ -38,13 +41,24 @@
   },
   {
    "fieldname": "subject_info",
-   "fieldtype": "Long Text",
+   "fieldtype": "Small Text",
    "label": "Subject Info"
+  },
+  {
+   "fieldname": "kutub_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Kutub Name"
+  },
+  {
+   "fieldname": "column_break_hhdhp",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-02-13 19:27:21.780416",
+ "modified": "2024-07-28 11:14:32.290987",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Subject",

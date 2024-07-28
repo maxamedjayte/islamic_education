@@ -57,7 +57,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="/app" class="logo d-flex align-items-center">
         <img src="/assets/islamic_education/img/jaamicul_ummah_brand.png"  height="100px" alt="">
         
       </a>
@@ -223,7 +223,7 @@
 
         <li class="nav-item dropdown pe-3">
 
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="/app/" data-bs-toggle="dropdown">
             <img src="{{ frappe.db.get_value('User', frappe.session.user, 'user_image') }}" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">{{ frappe.session.user }}</span>
           </a><!-- End Profile Iamge Icon -->

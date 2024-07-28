@@ -29,6 +29,8 @@
   "company",
   "column_break_xd2xh",
   "worker_type",
+  "column_break_dx1fk",
+  "department",
   "employment_details",
   "scheduled_confirmation_date",
   "column_break_32",
@@ -587,12 +589,21 @@
   {
    "fieldname": "column_break_xd2xh",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dx1fk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
   }
  ],
  "icon": "fa fa-user",
  "image_field": "image",
  "links": [],
- "modified": "2024-07-11 14:39:34.394154",
+ "modified": "2024-07-28 09:54:13.148250",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Worker",

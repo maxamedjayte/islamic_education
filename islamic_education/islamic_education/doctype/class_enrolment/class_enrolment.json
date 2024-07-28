@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{student}-{classe}",
  "creation": "2024-07-13 08:07:05.380874",
  "default_view": "List",
  "doctype": "DocType",
@@ -101,10 +102,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-13 10:27:03.721851",
+ "modified": "2024-07-28 10:42:43.892395",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Class Enrolment",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
