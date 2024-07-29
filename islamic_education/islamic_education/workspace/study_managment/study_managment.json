@@ -211,45 +211,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Classes ",
-   "link_count": 3,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Class",
-   "link_count": 0,
-   "link_to": "Class",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Class Transfer",
-   "link_count": 0,
-   "link_to": "Class Transfer",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Class Enrolment",
-   "link_count": 0,
-   "link_to": "Class Enrolment",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Activity",
    "link_count": 2,
    "link_type": "DocType",
@@ -275,9 +236,38 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Classes ",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Class",
+   "link_count": 0,
+   "link_to": "Class",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Class Transfer",
+   "link_count": 0,
+   "link_to": "Class Transfer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2024-07-28 18:52:24.005555",
+ "modified": "2024-07-29 09:18:41.911928",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Study Managment",
