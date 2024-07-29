@@ -43,7 +43,6 @@
   {
    "fieldname": "student",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Student",
    "options": "Student",
@@ -78,7 +77,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-29 10:21:22.174820",
+ "modified": "2024-07-29 10:39:23.656721",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Student Class Enrolment",
@@ -103,5 +102,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "student"
+ "title_field": "student_name"
 }
