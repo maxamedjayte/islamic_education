@@ -90,9 +90,13 @@
   {
    "link_doctype": "Student",
    "link_fieldname": "academic_year"
+  },
+  {
+   "link_doctype": "Markaz Activty",
+   "link_fieldname": "academic_year"
   }
  ],
- "modified": "2024-07-11 14:02:59.681623",
+ "modified": "2024-07-28 18:54:09.354187",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Academic Year",
@@ -113,8 +117,8 @@
   }
  ],
  "search_fields": "from_date,to_date",
- "sort_field": "modified",
- "sort_order": "DESC",
+ "sort_field": "from_date",
+ "sort_order": "ASC",
  "states": [],
  "translated_doctype": 1
 }

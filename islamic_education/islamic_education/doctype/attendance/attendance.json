@@ -89,7 +89,7 @@
    "fieldname": "student",
    "fieldtype": "Link",
    "label": "Student",
-   "options": "Student"
+   "options": "Class Enrolment"
   },
   {
    "fieldname": "note",
@@ -121,7 +121,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-07-27 16:29:20.846955",
+ "modified": "2024-07-28 17:32:30.145394",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Attendance",
