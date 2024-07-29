@@ -46,7 +46,7 @@ class StudentClassEnrolment(Document):
                 student.student_graduated_class = []
 
             if student.classe:
-                student_graduated_class = frappe.get_all("Student Graduated Class",filters={"parent":student.name,"classe":self.classe})
+                student_graduated_class = frappe.get_all("Student Graduated Class",filters={"parent":student.name,"classe":self.current_class})
                 if student_graduated_class:
                     print("\n\n\n\n\n\n\n\n\n\n\n\n")
                     print(student_graduated_class)
