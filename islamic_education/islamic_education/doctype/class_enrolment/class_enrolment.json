@@ -1,0 +1,126 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{student}-{current_class}",
+ "creation": "2024-07-29 09:26:02.594435",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "student_type",
+  "marks",
+  "column_break_gghfk",
+  "enrolment_date",
+  "section_break_zdgc5",
+  "student",
+  "student_name",
+  "from_class",
+  "student_parent",
+  "column_break_fm7od",
+  "current_class"
+ ],
+ "fields": [
+  {
+   "fieldname": "student_type",
+   "fieldtype": "Select",
+   "label": "Student Type",
+   "options": "New\nOld",
+   "translatable": 1
+  },
+  {
+   "fieldname": "marks",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Marks"
+  },
+  {
+   "fieldname": "column_break_gghfk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enrolment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Enrolment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_zdgc5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "student.student_name",
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Student Name"
+  },
+  {
+   "fetch_from": "student.classe",
+   "fieldname": "from_class",
+   "fieldtype": "Link",
+   "label": "From Class",
+   "options": "Class",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "student.the_parent",
+   "fieldname": "student_parent",
+   "fieldtype": "Link",
+   "label": "Student Parent",
+   "options": "Parent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fm7od",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Class",
+   "options": "Class",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-29 09:26:02.594435",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Class Enrolment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "current_class",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "student_name"
+}
