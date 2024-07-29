@@ -12,7 +12,7 @@ class StudentClassEnrolment(Document):
         # Retrieve the specific 'student_graduated_class' child to be removed
         to_remove = None
         for d in student.get("student_graduated_class"):
-            if d.classe == self.classe:
+            if d.classe == self.current_class:
                 to_remove = d
                 break
 
@@ -53,14 +53,14 @@ class StudentClassEnrolment(Document):
                     pass
                 else:
                     student.append("student_graduated_class", {
-                        "classe": self.classe,  # Use the classe from ClassEnrolment, not from Student
+                        "classe": self.current_class,  # Use the classe from ClassEnrolment, not from Student
                         "parent": student.name,
                         "parenttype": "Student",
                         "parentfield": "student_graduated_class"
                     })
 
             # Update student's current class after adding to graduated class
-            student.classe = self.classe
+            student.classe = self.current_class
 
             # Save changes to the student document
             student.save()
