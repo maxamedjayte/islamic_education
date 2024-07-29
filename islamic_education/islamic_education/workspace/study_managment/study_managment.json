@@ -269,15 +269,15 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Class Enrolment",
+   "label": "Student Class Enrolment",
    "link_count": 0,
-   "link_to": "Class Enrolment",
+   "link_to": "Student Class Enrolment",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2024-07-29 09:43:44.862437",
+ "modified": "2024-07-29 10:15:38.920929",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Study Managment",

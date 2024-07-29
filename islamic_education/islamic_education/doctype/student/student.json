@@ -144,7 +144,7 @@
  "index_web_pages_for_search": 1,
  "links": [
   {
-   "link_doctype": "Class Enrolment",
+   "link_doctype": "Student Class Enrolment",
    "link_fieldname": "student"
   },
   {
@@ -152,7 +152,7 @@
    "link_fieldname": "the_student"
   }
  ],
- "modified": "2024-07-29 09:43:10.396316",
+ "modified": "2024-07-29 10:09:45.281615",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Student",

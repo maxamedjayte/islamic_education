@@ -2,22 +2,20 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "format:{student}-{current_class}",
- "creation": "2024-07-29 09:26:02.594435",
+ "creation": "2024-07-29 10:06:08.970919",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "student_type",
-  "marks",
-  "column_break_gghfk",
+  "column_break_buqkz",
   "enrolment_date",
-  "section_break_zdgc5",
+  "section_break_cfqyl",
   "student",
   "student_name",
   "from_class",
-  "student_parent",
-  "column_break_fm7od",
+  "column_break_6b7ly",
   "current_class"
  ],
  "fields": [
@@ -25,17 +23,10 @@
    "fieldname": "student_type",
    "fieldtype": "Select",
    "label": "Student Type",
-   "options": "New\nOld",
-   "translatable": 1
+   "options": "New\nOld"
   },
   {
-   "fieldname": "marks",
-   "fieldtype": "Int",
-   "hidden": 1,
-   "label": "Marks"
-  },
-  {
-   "fieldname": "column_break_gghfk",
+   "fieldname": "column_break_buqkz",
    "fieldtype": "Column Break"
   },
   {
@@ -43,16 +34,16 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Enrolment Date",
-   "reqd": 1
+   "label": "Enrolment Date"
   },
   {
-   "fieldname": "section_break_zdgc5",
+   "fieldname": "section_break_cfqyl",
    "fieldtype": "Section Break"
   },
   {
    "fieldname": "student",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Student",
    "options": "Student",
@@ -62,7 +53,6 @@
    "fetch_from": "student.student_name",
    "fieldname": "student_name",
    "fieldtype": "Data",
-   "hidden": 1,
    "label": "Student Name"
   },
   {
@@ -70,37 +60,28 @@
    "fieldname": "from_class",
    "fieldtype": "Link",
    "label": "From Class",
-   "options": "Class",
-   "read_only": 1
+   "options": "Class"
   },
   {
-   "fetch_from": "student.the_parent",
-   "fieldname": "student_parent",
-   "fieldtype": "Link",
-   "label": "Student Parent",
-   "options": "Parent",
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_fm7od",
+   "fieldname": "column_break_6b7ly",
    "fieldtype": "Column Break"
   },
   {
    "fieldname": "current_class",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Class",
+   "label": "Current Classe",
    "options": "Class",
    "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-29 09:26:02.594435",
+ "modified": "2024-07-29 10:09:22.398084",
  "modified_by": "Administrator",
  "module": "Islamic Education",
- "name": "Class Enrolment",
+ "name": "Student Class Enrolment",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
@@ -122,5 +103,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "student_name"
+ "title_field": "student"
 }

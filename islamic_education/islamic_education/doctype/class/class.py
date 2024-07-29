@@ -9,7 +9,7 @@ def update_student_counts():
     classes = frappe.get_list("Class", filters={}, fields=["name"])
     # make loop to get all students for each class
     for classe in classes:
-        enrolment = frappe.get_list("Class Enrolment", filters={"classe": classe.name}, fields=["name"])
+        enrolment = frappe.get_list("Student Class Enrolment", filters={"classe": classe.name}, fields=["name"])
         # update student_counts in this classe
         frappe.db.set_value("Class", classe.name, "student_counts", len(enrolment))
         frappe.db.commit()

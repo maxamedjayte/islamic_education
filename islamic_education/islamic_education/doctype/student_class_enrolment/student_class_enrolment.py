@@ -4,7 +4,7 @@
 import frappe
 from frappe.model.document import Document
 
-class ClassEnrolment(Document):
+class StudentClassEnrolment(Document):
     def on_trash(self):
         # Retrieve the student document
         student = frappe.get_doc("Student", self.student)
@@ -31,7 +31,7 @@ class ClassEnrolment(Document):
             frappe.throw("This student is not active")
 
         # Query current class enrollments excluding the current one if it's an update
-        class_enrolments = frappe.get_list("Class Enrolment", 
+        class_enrolments = frappe.get_list("Student Class Enrolment", 
                                            filters={"student": self.student, 
                                                     "current_class": self.current_class,
                                                     "name": ["!=", self.name]}, 

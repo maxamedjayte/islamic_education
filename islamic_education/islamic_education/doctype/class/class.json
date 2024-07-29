@@ -87,15 +87,15 @@
    "link_fieldname": "the_classe"
   },
   {
-   "link_doctype": "Class Enrolment",
-   "link_fieldname": "classe"
+   "link_doctype": "Student Class Enrolment",
+   "link_fieldname": "current_class"
   },
   {
    "link_doctype": "Class Activity",
    "link_fieldname": "classe"
   }
  ],
- "modified": "2024-07-28 12:49:30.699745",
+ "modified": "2024-07-29 10:14:20.257855",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Class",
