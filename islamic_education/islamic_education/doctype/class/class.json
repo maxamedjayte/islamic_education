@@ -89,9 +89,13 @@
   {
    "link_doctype": "Class Enrolment",
    "link_fieldname": "classe"
+  },
+  {
+   "link_doctype": "Class Activity",
+   "link_fieldname": "classe"
   }
  ],
- "modified": "2024-07-13 10:38:55.293118",
+ "modified": "2024-07-28 12:49:30.699745",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Class",
@@ -114,8 +118,8 @@
  ],
  "search_fields": "academic_year,student_counts",
  "show_name_in_global_search": 1,
- "sort_field": "modified",
- "sort_order": "DESC",
+ "sort_field": "class_name",
+ "sort_order": "ASC",
  "states": [],
  "translated_doctype": 1
 }

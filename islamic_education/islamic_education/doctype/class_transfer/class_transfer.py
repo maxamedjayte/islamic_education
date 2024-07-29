@@ -11,21 +11,21 @@ class ClassTransfer(Document):
                 # Properly indented to align with the if statement
                 students = frappe.get_list("Student", filters={"classe": from_class.name}, fields=["name"])
                 for std in students:
-                    if not std.status:
-                        std.status = "Active"
-                    enrolment = frappe.get_list("Class Enrolment", filters={"student": std.name, "classe": from_class.name}, fields=["name"])
+                    if not std.status == "Active":
+                        pass
+                    enrolment = frappe.get_list("Class Enrolment", filters={"student": std.name, "current_class": from_class.name}, fields=["name"])
                     if not enrolment:
                         new_enrolment = frappe.new_doc("Class Enrolment")
                         new_enrolment.student = std.name
-                        new_enrolment.classe = from_class.name
+                        new_enrolment.current_classe = from_class.name
                         new_enrolment.enrolment_date = from_class.registered_date
                         new_enrolment.save()
                     
-                    to_class_enrolment = frappe.get_list("Class Enrolment", filters={"student": std.name, "classe": to_class.name}, fields=["name"])
+                    to_class_enrolment = frappe.get_list("Class Enrolment", filters={"student": std.name, "current_class": to_class.name}, fields=["name"])
                     if not to_class_enrolment:
                         new_enrolment = frappe.new_doc("Class Enrolment")
                         new_enrolment.student = std.name
-                        new_enrolment.classe = to_class.name
+                        new_enrolment.current_classe = to_class.name
                         new_enrolment.enrolment_date = to_class.registered_date
                         new_enrolment.save()
 
@@ -33,11 +33,11 @@ class ClassTransfer(Document):
                         frappe.db.commit()
             else:
                 # If the transfer_type is not "By Student"
-                from_enrolment_students = frappe.get_list("Class Enrolment", filters={"classe": from_class.name}, fields=["student"])
+                from_enrolment_students = frappe.get_list("Class Enrolment", filters={"current_class": from_class.name}, fields=["student"])
                 for std in from_enrolment_students:
                     if not std.status:
                         std.status = "Active"
-                    enrolment = frappe.get_list("Class Enrolment", filters={"student": std.student, "classe": to_class.name}, fields=["name"])
+                    enrolment = frappe.get_list("Class Enrolment", filters={"student": std.student, "current_class": to_class.name}, fields=["name"])
                     if not enrolment:
                         new_enrolment = frappe.new_doc("Class Enrolment")
                         new_enrolment.student = std.student

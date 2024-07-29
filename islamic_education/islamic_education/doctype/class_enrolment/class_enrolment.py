@@ -42,14 +42,20 @@ class ClassEnrolment(Document):
             if not hasattr(student, 'student_graduated_class'):
                 student.student_graduated_class = []
 
-            # Check if student has a current class set before appending to 'student_graduated_class'
+
             if student.classe:
-                student.append("student_graduated_class", {
-                    "classe": self.classe,  # Use the classe from ClassEnrolment, not from Student
-                    "parent": student.name,
-                    "parenttype": "Student",
-                    "parentfield": "student_graduated_class"
-                })
+                student_graduated_class = frappe.get_all("Student Graduated Class",filters={"parent":student.name,"classe":self.classe})
+                if student_graduated_class:
+                    print("\n\n\n\n\n\n\n\n\n\n\n\n")
+                    print(student_graduated_class)
+                    pass
+                else:
+                    student.append("student_graduated_class", {
+                        "classe": self.classe,  # Use the classe from ClassEnrolment, not from Student
+                        "parent": student.name,
+                        "parenttype": "Student",
+                        "parentfield": "student_graduated_class"
+                    })
 
             # Update student's current class after adding to graduated class
             student.classe = self.classe

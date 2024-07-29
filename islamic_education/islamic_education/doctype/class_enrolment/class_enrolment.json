@@ -15,11 +15,10 @@
   "section_break_zdgc5",
   "student",
   "student_name",
-  "student_id",
-  "current_class",
+  "from_class",
   "student_parent",
   "column_break_fm7od",
-  "classe"
+  "current_class"
  ],
  "fields": [
   {
@@ -72,20 +71,13 @@
    "read_only": 1
   },
   {
-   "fieldname": "classe",
+   "fieldname": "current_class",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Class",
    "options": "Class",
    "reqd": 1
-  },
-  {
-   "fetch_from": "student.classe",
-   "fieldname": "current_class",
-   "fieldtype": "Link",
-   "label": "Current Class",
-   "options": "Class",
-   "read_only": 1
   },
   {
    "fetch_from": "student.student_name",
@@ -95,14 +87,17 @@
    "label": "Student Name"
   },
   {
-   "fieldname": "student_id",
-   "fieldtype": "Read Only",
-   "label": "Student Id"
+   "fetch_from": "student.classe",
+   "fieldname": "from_class",
+   "fieldtype": "Link",
+   "label": "From Class",
+   "options": "Class",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-28 10:42:43.892395",
+ "modified": "2024-07-28 17:39:31.346130",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Class Enrolment",
@@ -122,6 +117,7 @@
    "write": 1
   }
  ],
+ "search_fields": "current_class",
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",

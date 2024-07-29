@@ -15,7 +15,7 @@ def get_class_day_periods_with_students():
         day = data.get('day')
         attend_week = data.get("attend_week")
 
-        students = frappe.get_all("Student", filters={'classe': classe}, fields=["name", "student_name"])
+        students = frappe.get_all("Class Enrolment", filters={'current_class': classe}, fields=["name","student", "student_name"])
         class_periods = frappe.get_all("Class Period", filters={'parent': classe}, fields=["name", "subject_name", "day_name", "instructor", "period_time"])
         attendance = frappe.get_all("Attendance", filters={'classe': classe, "week": attend_week, 'day': day}, fields=["name", "period", "day", "week","student","student_name","present"])
 
@@ -77,7 +77,7 @@ def get_attending_week_detail():
     days.reverse()  # This modifies the list in place
 
     classe = frappe.get_doc("Class", data.get('classe'))
-    students = frappe.get_all("Student", filters={"classe": classe.name}, fields=["name", "student_name"])
+    students = frappe.get_all("Class Enrolment", filters={"current_class": classe.name}, fields=["name", "student_name"])
     frappe.response['data'] = {
             'days': days,
             'classe': classe,
