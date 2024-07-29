@@ -140,13 +140,14 @@
     <hr>
     <div class="body">
             <table>
-                <thead style="background-color: rgb(21, 21, 21); color: white;">
+                <thead style="background-color: rgb(29, 28, 28); color: white;">
                     <tr>
                 <th width="15px">#</th>
                 <th>الإسم</th>
                 {% for pr in period %}
                 <th style="font-size:larger">{{ pr.subject_name }}</th>
                 {% endfor %}
+                <th style="background-color: brown;" >ملاحظة</th>
             </tr>
         </thead>
         <tbody>
@@ -158,6 +159,9 @@
                 <td>
                 </td>
                 {% endfor %}
+                <td>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                
             </tr>
             {% endfor %}
         </tbody>
@@ -169,8 +173,19 @@
 
       
 
-
-
+    <div class="container">
+        <br>
+        <hr>
+        <br>
+        <div class="d-flex justify-content-between align-items-center mb-3"> <!-- Flex container for alignment -->
+          <strong style="font-size: x-large;">  المربي: __________________________</strong>
+            <div>
+             <strong>  المدير:</strong>  _____________________
+            </div>
+        </div>
+        <hr>
+        
+    </div>
 
 
 
