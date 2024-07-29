@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-28 18:49:53.686960",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "activty_name",
+  "column_break_k4civ",
+  "activity_date",
+  "academic_year",
+  "duration",
+  "section_break_fvvtj",
+  "full_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "activty_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Activty Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_k4civ",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_fvvtj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "full_description",
+   "fieldtype": "Text Editor",
+   "label": "Full Description"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Duration"
+  },
+  {
+   "fieldname": "activity_date",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-29 05:26:17.407343",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Markaz Activty",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "activity_date",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "activty_name"
+}

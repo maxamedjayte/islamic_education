@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"Lgddmx8hmU\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u0627\u0644\u0641\u0635\u0648\u0644\",\"col\":3}},{\"id\":\"T-WC6B1xiW\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u0639\u062f\u062f \u0627\u0644\u0637\u0644\u0627\u0628\",\"col\":3}},{\"id\":\"cXrJdgsTO7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u0639\u062f\u062f \u0627\u0644\u0628\u0646\u064a\u0646\",\"col\":3}},{\"id\":\"2IFrIpXNZQ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u0639\u062f\u062f \u0627\u0644\u0628\u0646\u0627\u062a\",\"col\":3}},{\"id\":\"JA6KByU-Pc\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h5\\\">EDUCATION PLATFORM</span><br>\",\"col\":9}},{\"id\":\"y6uQXck902\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"DASHBOARD\",\"col\":3}},{\"id\":\"xbYXuKlmWu\",\"type\":\"card\",\"data\":{\"card_name\":\"Study Configration\",\"col\":4}},{\"id\":\"ojyng5vJnk\",\"type\":\"card\",\"data\":{\"card_name\":\"Student M\",\"col\":4}},{\"id\":\"iolOw-gClJ\",\"type\":\"card\",\"data\":{\"card_name\":\"Classes \",\"col\":4}},{\"id\":\"_TKGGF_4y9\",\"type\":\"card\",\"data\":{\"card_name\":\"Exam Managing\",\"col\":4}},{\"id\":\"-H1hTJJRUV\",\"type\":\"card\",\"data\":{\"card_name\":\"Attendance M\",\"col\":4}}]",
+ "content": "[{\"id\":\"Lgddmx8hmU\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u0627\u0644\u0641\u0635\u0648\u0644\",\"col\":3}},{\"id\":\"T-WC6B1xiW\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u0639\u062f\u062f \u0627\u0644\u0637\u0644\u0627\u0628\",\"col\":3}},{\"id\":\"cXrJdgsTO7\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u0639\u062f\u062f \u0627\u0644\u0628\u0646\u064a\u0646\",\"col\":3}},{\"id\":\"2IFrIpXNZQ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u0639\u062f\u062f \u0627\u0644\u0628\u0646\u0627\u062a\",\"col\":3}},{\"id\":\"JA6KByU-Pc\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h5\\\">EDUCATION PLATFORM</span><br>\",\"col\":9}},{\"id\":\"y6uQXck902\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"DASHBOARD\",\"col\":3}},{\"id\":\"xbYXuKlmWu\",\"type\":\"card\",\"data\":{\"card_name\":\"Study Configration\",\"col\":4}},{\"id\":\"ojyng5vJnk\",\"type\":\"card\",\"data\":{\"card_name\":\"Student M\",\"col\":4}},{\"id\":\"iolOw-gClJ\",\"type\":\"card\",\"data\":{\"card_name\":\"Classes \",\"col\":4}},{\"id\":\"_TKGGF_4y9\",\"type\":\"card\",\"data\":{\"card_name\":\"Exam Managing\",\"col\":4}},{\"id\":\"-H1hTJJRUV\",\"type\":\"card\",\"data\":{\"card_name\":\"Attendance M\",\"col\":4}},{\"id\":\"uWSsY57ge8\",\"type\":\"card\",\"data\":{\"card_name\":\"Activity\",\"col\":4}}]",
  "creation": "2024-02-19 14:44:37.180688",
  "custom_blocks": [],
  "docstatus": 0,
@@ -246,9 +246,38 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Activity",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Class Activity",
+   "link_count": 0,
+   "link_to": "Class Activity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Markaz Activity",
+   "link_count": 0,
+   "link_to": "Markaz Activty",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2024-07-13 08:55:55.393400",
+ "modified": "2024-07-28 18:52:24.005555",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Study Managment",

@@ -17,6 +17,9 @@
   },
   {
    "card": "Academic Year Count"
+  },
+  {
+   "card": "Markaz Activty"
   }
  ],
  "charts": [
@@ -36,7 +39,7 @@
  "idx": 0,
  "is_default": 0,
  "is_standard": 1,
- "modified": "2024-04-09 11:29:54.106749",
+ "modified": "2024-07-28 18:59:30.140608",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Education Dashboard",
