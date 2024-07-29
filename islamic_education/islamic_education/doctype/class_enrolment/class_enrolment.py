@@ -30,7 +30,7 @@ class ClassEnrolment(Document):
         # Query current class enrollments excluding the current one if it's an update
         class_enrolments = frappe.get_list("Class Enrolment", 
                                            filters={"student": self.student, 
-                                                    "classe": self.classe,
+                                                    "current_class": self.current_class,
                                                     "name": ["!=", self.name]}, 
                                            fields=["name"])
 
