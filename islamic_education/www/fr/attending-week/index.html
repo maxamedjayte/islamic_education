@@ -31,7 +31,7 @@ Attending Students
                 <select name="classe" class="form-select" id="class-select" required>
                     <option selected disabled value="">إختر الحلقة...</option>
                     {% for cls in classes %}
-                    <option value="{{ cls.name }}"><strong>{{ cls.class_name }}</strong> <span>{{ cls.academic_year }}</span> </option>
+                    <option style="font-weight: 600;" value="{{ cls.name }}">{{ cls.class_name }} -- <span style="color: grey;" >{{ cls.academic_year }}</span> </option>
                     {% endfor %}
                 </select>
                 <div class="invalid-feedback">Please select a valid class.</div>

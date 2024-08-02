@@ -64,15 +64,15 @@
  "index_web_pages_for_search": 1,
  "links": [
   {
-   "link_doctype": "Salary",
-   "link_fieldname": "salary_month"
-  },
-  {
    "link_doctype": "Expense",
    "link_fieldname": "expense_month"
+  },
+  {
+   "link_doctype": "Employee Salary",
+   "link_fieldname": "salary_month"
   }
  ],
- "modified": "2024-02-20 09:09:27.679661",
+ "modified": "2024-08-02 13:33:49.571555",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Monthly Financial",

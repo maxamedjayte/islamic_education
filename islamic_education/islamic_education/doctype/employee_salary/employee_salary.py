@@ -6,7 +6,7 @@ from frappe.model.document import Document
 
 class EmployeeSalary(Document):
     def before_save(self):
-        self.balance = self.employee_salary - self.paid_money
+        self.balance = self.salary - self.paid_money
 
     def on_submit(self):
         frappe.db.set_value("Monthly Financial", self.salary_month, "total_salary", get_total_employee_salary(self.salary_month))

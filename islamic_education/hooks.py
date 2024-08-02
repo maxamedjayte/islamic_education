@@ -218,4 +218,8 @@ website_route_rules = [
     {"from_route": "/fr/report/student/detail/<name>", "to_route": "fr/report/student/detail"},
     {"from_route": "/fr/attending-week/<name>", "to_route": "fr/attending-week"},
     {"from_route": "/fr/print/attending-week/<attend_week>/<classe>","to_route":"fr/print/attending-week/"},
+
+    # blog post
+    {"from_route": "/so/maqaal/<title>", "to_route": "so/maqaal/"},
+
 ]

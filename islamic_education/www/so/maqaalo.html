@@ -1,71 +1,74 @@
 {% extends '/www/so_web_base.html' %}
 
 {% block title %}
-Wax Qabadka AL-UMMAH
+Maqaalada AL-UMMAH
 {% endblock %}
 
 {% block content %}
 <section id="breadcrumbs" class="breadcrumbs">
-    <div class="container">
+  <div class="container">
 
-      <div class="d-flex justify-content-between align-items-center">
-        <h2>Maqaalo</h2>
-        <ol>
-          <li><a href="/so/">Home</a></li>
-          <li>Blog</li>
-        </ol>
-      </div>
-
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>Maqaalo</h2>
+      <ol>
+        <li><a href="/so/">Home</a></li>
+        <li>Blog</li>
+      </ol>
     </div>
-  </section><!-- End Breadcrumbs -->
-  
-  <section id="blog" class="blog">
-    <div class="container" data-aos="fade-up">
+
+  </div>
+</section><!-- End Breadcrumbs -->
+
+<section id="blog" class="blog">
+  <div class="container" data-aos="fade-up">
 
 
 
-        <div class="col-lg-12 entries row">
-          {% set blog_posts = frappe.get_all('Blog Post', fields=['title', 'blog_category','blogger','published_on','blog_intro']) %}
+    <div class="col-lg-12 entries row">
+      {% set blog_posts = frappe.get_all('Blog Post', fields=["name",'title',
+      "meta_image",'blog_category','blogger','published_on','blog_intro']) %}
 
-          {% for blog in blog_posts %}
-          
-            <div class="col-4">
-                <article class="entry">
+      {% for blog in blog_posts %}
 
-                    <div class="entry-img">
-                      <img src="/assets/islamic_education/img/blog/blog-1.jpg" alt="" class="img-fluid">
-                    </div>
-        
-                    <h2 class="entry-title">
-                      <a href="blog-single.html">{{blog.title}}</a>
-                    </h2>
-        
-                    <div class="entry-meta">
-                      <ul>
-                        <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html" class="fw-bold">{{blog.blogger}}</a></li>
-                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="{{blog.published_on}}">{{blog.published_on}}</time></a></li>
-                      </ul>
-                    </div>
-        
-                    <div class="entry-content">
-                      <p>
-                     {{blog.blog_intro}} 
-                      </p>
-                      <div class="read-more">
-                        <a href="blog-single.html">Read More</a>
-                      </div>
-                    </div>
-        
-                  </article><!-- End blog entry -->
-        
+      <div class="col-4">
+        <article class="entry">
+
+          <div class="entry-img">
+            <img src="{{blog.meta_image}}" alt="" class="img-fluid">
+          </div>
+
+          <h2 class="entry-title">
+            <a href="/so/maqaal/{{blog.name}}">{{blog.title}}</a>
+          </h2>
+
+          <div class="entry-meta">
+            <ul>
+              <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html"
+                  class="fw-bold">{{blog.blogger}}</a></li>
+              <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time
+                    datetime="{{blog.published_on}}">{{blog.published_on}}</time></a></li>
+            </ul>
+          </div>
+
+          <div class="entry-content">
+            <p>
+              {{blog.blog_intro}}
+            </p>
+            <div class="read-more">
+              <a href="/so/maqaal/{{blog.name}}">Read More</a>
             </div>
-          {% endfor %}
-            
+          </div>
 
-        </div><!-- End blog entries list -->
+        </article><!-- End blog entry -->
+
+      </div>
+      {% endfor %}
 
 
-    </div>
-  </section><!-- End Blog Section -->
+    </div><!-- End blog entries list -->
+
+
+  </div>
+</section><!-- End Blog Section -->
 
 {% endblock %}
