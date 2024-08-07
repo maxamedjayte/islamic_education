@@ -16,7 +16,8 @@
   "student_name",
   "from_class",
   "column_break_6b7ly",
-  "current_class"
+  "current_class",
+  "current_academic_year"
  ],
  "fields": [
   {
@@ -73,11 +74,18 @@
    "label": "Current Classe",
    "options": "Class",
    "reqd": 1
+  },
+  {
+   "fetch_from": "current_class.academic_year",
+   "fieldname": "current_academic_year",
+   "fieldtype": "Link",
+   "label": "Current Academic Year",
+   "options": "Academic Year"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-29 10:39:23.656721",
+ "modified": "2024-08-05 12:55:29.982307",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Student Class Enrolment",

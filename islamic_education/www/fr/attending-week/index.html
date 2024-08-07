@@ -108,7 +108,7 @@ Attending Students
                     return `
                     <tr>
                         <th scope="row">${index + 1}</th>
-                            <td data-student-id="${student.name}">${student.student_name}</td>  <!-- Now includes a data attribute for the student ID -->
+                            <td data-student-id="${student.name}">${student.student_name}</td> 
                             ${data.data.class_periods.map(period => {
                                 if (period.day_name == day) {
                                     const studentAttendance = data.data.attendance.find(att => att.student === student.name && att.period === period.subject_name);
@@ -167,6 +167,11 @@ Attending Students
 
     document.getElementById('save_attendance').addEventListener('click', function () {
         const rows = document.querySelectorAll('#attend_period_tbody tr');
+        const saveButton = document.querySelector('.btn-success');
+        
+        saveButton.disabled = true;
+        saveButton.textContent = '...Loading';
+
         let attendance_data = [];
 
         rows.forEach(row => {
@@ -178,9 +183,10 @@ Attending Students
             checkboxes.forEach((checkbox, index) => {
                 const periodName = document.getElementById('attend_period_thead').querySelectorAll('th')[index + 2].textContent.split(' ')[0]; // Assuming period name is in the header
                 attendance_data.push({
-                    student_id: studentId,  // Use the unique student ID
+                    student_id: studentId, 
                     class: document.getElementById('class-select').value,
                     day: document.getElementById('day-select').value,
+                    attend_week: "{{attending_week.name}}",
                     period: periodName,
                     present: checkbox.checked?1:0
                 });
@@ -190,29 +196,32 @@ Attending Students
         console.log(attendance_data)
 
         // Send the collected data to the server
-        // fetch('/api/method/islamic_education.api.save_attendance', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //         'Accept': 'application/json',
-        //         'X-Frappe-CSRF-Token': frappe.csrf_token
-        //     },
-        //     body: JSON.stringify({ data: JSON.stringify(attendance_data) })
-        // })
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         if (data.message) {
-        //             console.log('Success:', data.message);
-        //             alert('Attendance saved successfully!');
-        //         } else if (data.error) {
-        //             console.error('Error:', data.error);
-        //             alert('Failed to save attendance.');
-        //         }
-        //     })
-        //     .catch(error => {
-        //         console.error('Fetch error:', error);
-        //         alert('Failed to save attendance.');
-        //     });
+        fetch('/api/method/islamic_education.api.save_student_attendance', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'X-Frappe-CSRF-Token': frappe.csrf_token
+            },
+            body: JSON.stringify({ data: JSON.stringify(attendance_data) })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    console.log('Success:', data.message);
+                    alert('Attendance saved successfully!');
+                } else if (data.error) {
+                    console.error('Error:', data.error);
+                    alert('Failed to save attendance.');
+                }
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                alert('Failed to save attendance.');
+            }).finally(() => {
+                saveButton.disabled = false;
+                saveButton.textContent = 'Save';
+            });
     });
 
     document.getElementById("print_paper").addEventListener('click', function () {

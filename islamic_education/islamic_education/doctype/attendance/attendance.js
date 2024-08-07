@@ -101,7 +101,7 @@ frappe.ui.form.on('Attendance', {
 	day: function (frm) {
 
 		// get the class from the form
-		var the_class = frm.doc.class;
+		var the_class = frm.doc.classe;
 		var day = frm.doc.day;
 		// period table in the class by the day
 		frappe.call({

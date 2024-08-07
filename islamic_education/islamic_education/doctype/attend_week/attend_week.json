@@ -8,6 +8,8 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "academic_year",
+  "section_break_a2gy1",
   "week_name",
   "column_break_3z59y",
   "week_date"
@@ -32,6 +34,17 @@
    "in_standard_filter": 1,
    "label": "Week Date",
    "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_a2gy1",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -41,7 +54,7 @@
    "link_fieldname": "week"
   }
  ],
- "modified": "2024-06-30 12:04:34.365230",
+ "modified": "2024-08-05 12:37:41.248067",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Attend Week",

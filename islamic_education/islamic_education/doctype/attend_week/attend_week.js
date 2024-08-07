@@ -3,6 +3,14 @@
 
 frappe.ui.form.on('Attend Week', {
 	refresh: function(frm) {
+		frm.set_query("academic_year", function() {
+			return {
+				"filters": {
+					"active_academic_year": 1
+				}
+			};
+		}
+	);
 		
 		frm.add_custom_button(__("Xaadirinta Ardada"), function () {
 			// delete all students in the table from the database
