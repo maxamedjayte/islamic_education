@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link href="/assets/islamic_education/nice_admin/img/favicon.png" rel="icon">
+  <link href="/assets/islamic_education/nice_admin/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Naskh+Arabic:wght@400..700&display=swap"
+        rel="stylesheet">
+
+    <title>Xaadirinta Isbuuca</title>
+    <script>
+        window.frappe = {}
+        frappe.ready_events = []
+        frappe.ready = function (fn) {
+            frappe.ready_events.push(fn)
+        }
+        window.dev_server = 1
+        window.socketio_port = 9000
+    </script>
+    <style>
+        body {
+            margin-left: 30px;
+            font-family: 'Noto Naskh Arabic';
+            margin-right: 30px;
+        }
+
+        #header-image {
+            width: 100%;
+        }
+
+        table tbody tr td {
+            border-left: 1px solid #2d2d2d;
+            text-align: right;
+            font-size: x-large;
+        }
+
+        table thead tr th {
+            font-weight: bolder;
+            font-size: x-large;
+            border-left: 0.5px solid rgb(227, 227, 227);
+        }
+       
+        /* input[type="checkbox"] {
+            zoom: 1.5;
+        } */
+        .card {
+            width: 100%;
+            padding: 15px;
+        }
+
+        .card .title {
+            font-size: x-large;
+            font-weight: bolder;
+        }
+
+        .card .title span {
+            font-size: large;
+            font-weight: bolder;
+        }
+
+        table {
+        width: 100%; /* Full width */
+        border-collapse: collapse; /* No space between table borders */
+    }
+
+    thead {
+        background-color: #007bff; /* Bootstrap primary color */
+        color: white;
+    }
+    .card{
+        border: 0.5px solid #2d2d2d; /* Enhances border visibility */
+
+    }
+
+    th, td {
+        padding: 8px; /* Table cell padding */
+        border-bottom: 0.5px solid #2d2d2d; /* Light gray border for the bottom of each cell */
+        border-right: 0.5px solid #2d2d2d; /* Light gray border for the right of each cell */
+    }
+
+    th {
+        font-weight: bold;
+        border-top: 0.5px solid #dee2e6; /* Top border for headers */
+    }
+
+  
+
+
+    /* Responsive behavior: ensure table does not exceed the screen width */
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+       
+    </style>
+</head>
+
+<body>
+ 
+    <div dir="rtl" id="print_container_id">
+        <img id="header-image"  src="/assets/islamic_education/img/logo-header.png" alt="">
+        <div class="card">
+            <div id="header_row" class="row">
+                <div class="col-md-6 col-6">
+                    <h5 class="card-title">الحلقة </h5>
+                    <p class="card-text" id="className">{{ classe.class_name }}</p>
+                </div>
+                <!-- Section for Academic Year -->
+                <div class="col-md-6 col-6">
+                    <h5 class="card-title">عام الدراسي </h5>
+                    <p class="card-text" id="academic_year">{{ classe.academic_year }}</p>
+                </div>
+             
+            </div>
+
+        </div>
+    </div>
+<br>
+<div dir="rtl" class="card">
+
+    <hr>
+    <div class="body">
+            <table>
+                <thead style="background-color: rgb(29, 28, 28); color: white;">
+                    <tr>
+                <th width="15px">#</th>
+                <th>الإسم</th>
+                <th>الملاحظة</th>
+                <th>الوقت</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ student.student_name }}</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+</div>
+
+
+      
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>

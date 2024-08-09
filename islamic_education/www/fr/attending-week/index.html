@@ -22,7 +22,8 @@ Attending Students
         <div class="d-flex justify-content-between align-items-center mb-3"> <!-- Flex container for alignment -->
             <h5 class="card-title" style="font-family: 'Amiri', serif;font-size: x-large;">تحطير الطلاب </h5>
             <div>
-                <button id="print_paper" class="btn btn-info"> Print </button> <!-- Save Button -->
+                <button id="print_paper" class="btn btn-info"> Print Attendance  </button> <!-- Save Button -->
+                <button id="print_note" class="btn btn-danger"> Print Note</button> <!-- Save Button -->
             </div>
         </div>
         <form class="row g-3 needs-validation" id="attending-week-form" novalidate>
@@ -226,11 +227,17 @@ Attending Students
 
     document.getElementById("print_paper").addEventListener('click', function () {
         const classe = document.getElementById('class-select').value;
-        const day = document.getElementById('day-select').value;
-        if (classe && day) {
+        if (classe) {
             window.location.href = '/fr/print/attending-week/{{attending_week.name}}/'+classe
         }
     })
+    document.getElementById("print_note").addEventListener('click', function () {
+        const classe = document.getElementById('class-select').value;
+        if (classe) {
+            window.location.href = '/fr/print/student-note/'+classe
+        }
+    })
+    
 
 </script>
 {% endblock %}

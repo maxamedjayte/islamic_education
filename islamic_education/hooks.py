@@ -217,6 +217,7 @@ app_license = "MIT"
 website_route_rules = [
     # student
     {"from_route": "/fr/report/student/detail/<name>", "to_route": "fr/report/student/detail"},
+    {"from_route": "/fr/print/student-note/<classe>", "to_route": "fr/print/student-note"},
 
     # attend
     {"from_route": "/fr/attending-week/<name>", "to_route": "fr/attending-week"},

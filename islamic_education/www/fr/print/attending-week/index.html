@@ -112,8 +112,8 @@
         <div class="card">
             <div id="header_row" class="row">
                 <div class="col-md-4 col-4">
-                    <h5 class="card-title">الحلقة </h5>
-                    <p class="card-text" id="className">{{ classe.class_name }}</p>
+                    <h5 class="card-title fw-bold ">الحلقة </h5>
+                    <p class="card-text" style="font-size:x-large" id="className">{{ classe.class_name }}</p>
                 </div>
                 <!-- Section for Academic Year -->
                 <div class="col-md-4 col-4">
@@ -145,9 +145,9 @@
                 <th width="15px">#</th>
                 <th>الإسم</th>
                 {% for pr in period %}
-                <th style="font-size:larger">{{ pr.subject_name }}</th>
+                <th style="font-size:larger">{{ pr.subject_name }}<br> {% if pr.period_time %} <span style="font-size: small;">{{ pr.period_time }}</span> {% endif %} </th>
                 {% endfor %}
-                <th style="background-color: brown;" >ملاحظة</th>
+                <!-- <th  style="background-color: brown;" >ملاحظة</th> -->
             </tr>
         </thead>
         <tbody>
@@ -159,8 +159,8 @@
                 <td>
                 </td>
                 {% endfor %}
-                <td>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </td>
+                <!-- <td>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td> -->
                 
             </tr>
             {% endfor %}

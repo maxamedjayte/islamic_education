@@ -89,43 +89,43 @@ def get_attending_week_detail():
 
 @frappe.whitelist(methods=['POST'])
 def save_student_attendance():
-    # try:
-    data = frappe.local.form_dict
-    attend_data = json.loads(data.get('data'))
-    print(attend_data)
-    print('\n\n\n\n\n\n')
-    
-    for atd in attend_data:
-        student_id = atd['student_id']
-        classe = atd['class']
-        day = atd['day']
-        attend_week = atd['attend_week']
-        period = atd['period']
-        present = atd['present']
+    try:
+        data = frappe.local.form_dict
+        attend_data = json.loads(data.get('data'))
+        print(attend_data)
+        print('\n\n\n\n\n\n')
         
-        attendance = frappe.get_all("Attendance", filters={
-            'classe': classe,
-            'student': student_id,
-            'day': day,
-            'week': attend_week,
-            'period': period
-        }, fields=["name", "student", "day", "week"])
-        if attendance:
-            attendance = frappe.get_doc("Attendance", attendance[0].name)
-            attendance.present = present
-            attendance.save()
-        else:
-            attendance = frappe.new_doc("Attendance")
-            attendance.student = student_id
-            attendance.day = day
-            attendance.classe = classe
-            attendance.period = period
-            attendance.week = attend_week
-            attendance.present = present
-            attendance.save()
+        for atd in attend_data:
+            student_id = atd['student_id']
+            classe = atd['class']
+            day = atd['day']
+            attend_week = atd['attend_week']
+            period = atd['period']
+            present = atd['present']
+            
+            attendance = frappe.get_all("Attendance", filters={
+                'classe': classe,
+                'student': student_id,
+                'day': day,
+                'week': attend_week,
+                'period': period
+            }, fields=["name", "student", "day", "week"])
+            if attendance:
+                attendance = frappe.get_doc("Attendance", attendance[0].name)
+                attendance.present = present
+                attendance.save()
+            else:
+                attendance = frappe.new_doc("Attendance")
+                attendance.student = student_id
+                attendance.day = day
+                attendance.classe = classe
+                attendance.period = period
+                attendance.week = attend_week
+                attendance.present = present
+                attendance.save()
 
-    return {"message": "Attendance taken successfully"}
+        return {"message": "Attendance taken successfully"}
         
-    # except Exception as e:
-    #     frappe.log_error(frappe.get_traceback(), 'save_student_attendance failed')
-    #     return {"error": str(e)}
+    except Exception as e:
+        frappe.log_error(frappe.get_traceback(), 'save_student_attendance failed')
+        return {"error": str(e)}
