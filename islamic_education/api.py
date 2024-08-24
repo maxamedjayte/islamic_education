@@ -92,8 +92,7 @@ def save_student_attendance():
     try:
         data = frappe.local.form_dict
         attend_data = json.loads(data.get('data'))
-        print(attend_data)
-        print('\n\n\n\n\n\n')
+        
         
         for atd in attend_data:
             student_id = atd['student_id']
@@ -102,15 +101,16 @@ def save_student_attendance():
             attend_week = atd['attend_week']
             period = atd['period']
             present = atd['present']
-            
             attendance = frappe.get_all("Attendance", filters={
                 'classe': classe,
                 'student': student_id,
                 'day': day,
                 'week': attend_week,
                 'period': period
-            }, fields=["name", "student", "day", "week"])
+            }, fields=["name", "student", "day", "week"])            
+            
             if attendance:
+
                 attendance = frappe.get_doc("Attendance", attendance[0].name)
                 attendance.present = present
                 attendance.save()
@@ -127,5 +127,5 @@ def save_student_attendance():
         return {"message": "Attendance taken successfully"}
         
     except Exception as e:
-        frappe.log_error(frappe.get_traceback(), 'save_student_attendance failed')
+        print(str(e))
         return {"error": str(e)}

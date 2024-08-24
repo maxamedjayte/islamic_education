@@ -99,7 +99,8 @@ Attending Students
                 let theadHTML = `<tr><th>#</th><th>إسم الطالب</th>`;
                 data.data.class_periods.forEach(period => {
                     if(period.day_name == day){
-                        theadHTML += `<th>${period.subject_name} <span style="font-size: small"> ${period.period_time}</span></th>`;
+                        theadHTML += `<th>${period.subject_name}</th>`;
+                        // theadHTML += `<th>${period.subject_name} <span style="font-size: small"> ${period.period_time}</span></th>`;
 
                     }
                 });
@@ -182,7 +183,9 @@ Attending Students
 
             const checkboxes = row.querySelectorAll('input[type="checkbox"]');
             checkboxes.forEach((checkbox, index) => {
-                const periodName = document.getElementById('attend_period_thead').querySelectorAll('th')[index + 2].textContent.split(' ')[0]; // Assuming period name is in the header
+                
+                const periodName = document.getElementById('attend_period_thead').querySelectorAll('th')[index + 2].textContent; // Assuming period name is in the header
+                console.log(periodName)
                 attendance_data.push({
                     student_id: studentId, 
                     class: document.getElementById('class-select').value,
@@ -194,7 +197,6 @@ Attending Students
             });
         });
 
-        console.log(attendance_data)
 
         // Send the collected data to the server
         fetch('/api/method/islamic_education.api.save_student_attendance', {
