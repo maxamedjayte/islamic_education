@@ -13,6 +13,7 @@
   "enrolment_date",
   "section_break_cfqyl",
   "student",
+  "status",
   "student_name",
   "from_class",
   "column_break_6b7ly",
@@ -81,11 +82,17 @@
    "fieldtype": "Link",
    "label": "Current Academic Year",
    "options": "Academic Year"
+  },
+  {
+   "fetch_from": "student.status",
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-05 12:55:29.982307",
+ "modified": "2024-08-24 13:48:06.111774",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Student Class Enrolment",
