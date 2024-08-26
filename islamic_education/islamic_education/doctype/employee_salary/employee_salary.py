@@ -9,7 +9,10 @@ class EmployeeSalary(Document):
         self.balance = self.salary - self.paid_money
 
     def on_submit(self):
-        frappe.db.set_value("Monthly Financial", self.salary_month, "total_salary", get_total_employee_salary(self.salary_month))
+        if self.balance != 0:
+            frappe.throw(f"Cannot submit because the balance is not zero. Please confirm to proceed.")
+        else:
+            frappe.db.set_value("Monthly Financial", self.salary_month, "total_salary", get_total_employee_salary(self.salary_month))
 
 
 @frappe.whitelist()

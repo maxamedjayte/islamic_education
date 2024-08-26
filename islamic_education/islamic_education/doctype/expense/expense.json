@@ -17,7 +17,8 @@
   "info",
   "amended_from",
   "section_break_go4pf",
-  "expence_object"
+  "expence_object",
+  "expense_data"
  ],
  "fields": [
   {
@@ -81,12 +82,18 @@
    "label": "Expense Objects",
    "options": "Expense Object",
    "reqd": 1
+  },
+  {
+   "fetch_from": "expense_month.salary_date",
+   "fieldname": "expense_data",
+   "fieldtype": "Date",
+   "label": "Expense Data"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-07-11 14:31:59.510274",
+ "modified": "2024-08-26 14:54:28.795331",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Expense",

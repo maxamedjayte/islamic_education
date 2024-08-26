@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"TiNPQwXWax\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">FINANCIAL MANAGMENT<br></span>\",\"col\":9}},{\"id\":\"qN_LxHBXbc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"DASHBOARD\",\"col\":3}},{\"id\":\"cUhjBH_pHo\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"All Employee\",\"col\":3}},{\"id\":\"T3Xsj5fUF7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XJJ3O4_Rpt\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee Info\",\"col\":4}},{\"id\":\"oxMEOKQyVO\",\"type\":\"card\",\"data\":{\"card_name\":\"Finanacial\",\"col\":4}}]",
+ "content": "[{\"id\":\"TiNPQwXWax\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">FINANCIAL MANAGMENT<br></span>\",\"col\":9}},{\"id\":\"qN_LxHBXbc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"DASHBOARD\",\"col\":3}},{\"id\":\"cUhjBH_pHo\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"All Employee\",\"col\":3}},{\"id\":\"T3Xsj5fUF7\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"XJJ3O4_Rpt\",\"type\":\"card\",\"data\":{\"card_name\":\"Employee Info\",\"col\":4}},{\"id\":\"oxMEOKQyVO\",\"type\":\"card\",\"data\":{\"card_name\":\"Finanacial\",\"col\":4}},{\"id\":\"V5O45O9qhl\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial Report\",\"col\":4}}]",
  "creation": "2024-02-19 15:06:56.487867",
  "custom_blocks": [],
  "docstatus": 0,
@@ -89,9 +89,38 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Financial Report",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Salary Report",
+   "link_count": 0,
+   "link_to": "Salary Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Expence Report",
+   "link_count": 0,
+   "link_to": "Expense Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2024-07-14 07:20:58.419778",
+ "modified": "2024-08-26 16:17:48.151320",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Financial Managment",
@@ -106,7 +135,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 20.0,
+ "sequence_id": 11.0,
  "shortcuts": [
   {
    "color": "Grey",
