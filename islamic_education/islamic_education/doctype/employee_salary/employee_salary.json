@@ -99,6 +99,7 @@
    "fetch_from": "employee.bank_ac_no",
    "fieldname": "bank_acc",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Bank Acc",
    "read_only": 1
   },
@@ -125,7 +126,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-07-11 20:59:30.555791",
+ "modified": "2024-08-30 09:53:04.894488",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Employee Salary",
@@ -145,8 +146,10 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "employee_name",
  "track_changes": 1
 }
