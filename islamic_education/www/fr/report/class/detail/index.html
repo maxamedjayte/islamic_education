@@ -1,0 +1,81 @@
+{% extends '/www/admin_base.html' %}
+
+{% block title %}
+Class Detail
+{% endblock %}
+
+{% block content %}
+<style>
+    /* Apply Amiri-Bold to the table header and table body */
+    #attend_period_thead,
+    #attend_period_tbody {
+        font-family: 'Amiri', serif;
+        /* Specify 'Amiri' and fall back to a generic serif font if not available */
+        font-weight: 700;
+        /* Ensures the bold style is applied */
+    }
+    
+</style>
+
+<div dir="rtl"  class="card p-4">
+    <div id="header_row" class="row">
+        <div class="col-md-4 col-4">
+            <h5 class="card-title fw-bold " >الحلقة </h5>
+            <p class="card-text" style="font-family: 'Amiri', serif;font-size: x-large;" id="className">{{ classe.class_name }}</p>
+        </div>
+        <!-- Section for Academic Year -->
+        <div class="col-md-4 col-4">
+            <h5 class="card-title">عام الدراسي </h5>
+            <p class="card-text" id="academic_year">{{ classe.academic_year }}</p>
+        </div>
+        <!-- Section for Week Name -->
+      
+    </div>
+
+</div>
+<div dir="rtl" class="card">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3"> <!-- Flex container for alignment -->
+            <h5 class="card-title" style="font-family: 'Amiri', serif;font-size: x-large;">معلومات الفصل : {{ classe.class_name }}</h5>
+            <div>
+                <button id="print_paper" class="btn btn-info"> Print Attendance  </button> <!-- Save Button -->
+                <button id="print_note" class="btn btn-danger"> Print Note</button> <!-- Save Button -->
+            </div>
+        </div>
+        <form class="row g-3 needs-validation" id="attending-week-form" novalidate>
+            <div class="col-md-6">
+                <label for="class-select" class="form-label">الحلقة</label>
+               
+                <div class="invalid-feedback">Please select a valid class.</div>
+            </div>
+            <div class="col-md-6">
+                <label for="day-select" class="form-label">اليوم</label>
+               
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit"> ابحث المعلومة</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div dir="rtl" class="card">
+    <div class="card-body">
+
+        <div class="d-flex justify-content-between align-items-center mb-3"> <!-- Flex container for alignment -->
+            <h2 class="card-title" style="font-family: 'Amiri', serif; font-size: x-large;">حطور الطلاب</h2>
+            <div>
+                <input type="checkbox" id="check_all"
+                    style="min-height:25px;min-width:25px;margin: 0px;"><!-- Check All Button -->
+                <button id="save_attendance" class="btn btn-success">Save</button> <!-- Save Button -->
+            </div>
+        </div>
+        <hr>
+        <table class="table">
+            <thead id="attend_period_thead" style="font-size: large;" class="thead-dark"></thead>
+            <tbody id="attend_period_tbody"></tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}

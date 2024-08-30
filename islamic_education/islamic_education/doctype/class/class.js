@@ -12,6 +12,11 @@ frappe.ui.form.on('Class', {
 	// 		};
 	// 	}
 	// );
+	frm.add_custom_button(__('Class Report'), function() {
+		window.location.href = '/fr/report/class/detail/'+frm.doc.name;
+
+	}
+	).css({"background-color": "#097969", "color": "white"});
 
 	frm.fields_dict['class_period'].grid.get_field('subject').get_query = function(doc, cdt, cdn) {
 		var child = locals[cdt][cdn];

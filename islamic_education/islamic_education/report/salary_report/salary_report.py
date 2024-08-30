@@ -36,10 +36,23 @@ def execute(filters=None):
             "salary_month": salary.salary_month,
             "salary": salary.salary,
             "bank_name": salary.bank_name,
-            "bank_acc": salary.bank_acc,
+            "bank_acc": mask_bank_account(salary.bank_acc),
             "mobile_number": salary.mobile_number,
             "paid_money": salary.paid_money,
             "balance": salary.balance,
         })
 
     return columns, data
+
+
+
+
+def mask_bank_account(bank_acc):
+    # Show the first 5 characters and mask the rest with asterisks
+	if bank_acc:
+		if len(bank_acc) > 5:
+			return bank_acc[:5] + '*' * (len(bank_acc) - 5)
+		else:
+			return bank_acc  # If the account number is less than or equal to 5 characters, return as is
+	else:
+		return bank_acc

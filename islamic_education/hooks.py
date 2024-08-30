@@ -227,6 +227,7 @@ website_route_rules = [
     {"from_route": "/so/maqaal/<title>", "to_route": "so/maqaal/"},
 
 
-    # 
+    # class
+    {"from_route": "/fr/report/class/detail/<name>", "to_route": "fr/report/class/detail"},
 
 ]

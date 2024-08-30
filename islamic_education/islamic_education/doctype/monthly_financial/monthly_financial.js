@@ -2,9 +2,20 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Monthly Financial', {
-	// refresh: function(frm) {
-
-	// }
+	refresh: function(frm) {
+		frm.add_custom_button(__('Generate Salary'), function() {
+            frappe.call({
+                method: 'islamic_education.islamic_education.doctype.monthly_financial.monthly_financial.generate_salaries',
+                args: {
+                    monthly_financial_name: frm.doc.name
+                },
+                callback: function(response) {
+                    frappe.msgprint(response.message);
+					frm.doc.refresh()
+                }
+            });
+        });
+	},
 	validate: function (frm) {
 		// check if there any montly financial in the table with the same month and year
 		frappe.call({

@@ -58,3 +58,30 @@ def get_total_employee_salary(monthly_financial):
     result = frappe.db.sql("""SELECT SUM(paid_money) FROM `tabExpense Task` WHERE expense_month = %s AND docstatus = 1""", (monthly_financial,), as_list=True)
     total_expence = result[0][0] if result and result[0][0] is not None else 0
     return total_expence
+
+
+
+
+@frappe.whitelist()
+def generate_salaries(monthly_financial_name):
+    employees = frappe.get_all('Worker', filters={'ctc': ['>', 0]}, fields=['name', 'employee_name', 'ctc', 'bank_name', 'bank_ac_no', 'cell_number'])
+
+    generated_count = 0
+    for employee in employees:
+        if not frappe.db.exists('Employee Salary', {'employee': employee['name'], 'salary_month': monthly_financial_name}):
+            salary_doc = frappe.get_doc({
+                'doctype': 'Employee Salary',
+                'employee': employee['name'],
+                'employee_name': employee['employee_name'],
+                'salary': employee['ctc'],
+                'salary_month': monthly_financial_name,
+                'bank_name': employee['bank_name'],
+                'bank_acc': employee['bank_ac_no'],
+                'mobile_number': employee['cell_number'],
+                'paid_money': employee['ctc'],
+                'docstatus': 0  # Draft status
+            })
+            salary_doc.insert()
+            generated_count += 1
+
+    return f"{generated_count} salaries generated successfully."
