@@ -7,6 +7,7 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "madarasa_class",
   "status",
   "column_break_o1mo0",
   "gender",
@@ -68,7 +69,8 @@
    "fieldname": "student_quran_level",
    "fieldtype": "Table",
    "label": "Student Quran Level",
-   "options": "Student Quran Level"
+   "options": "Student Quran Level",
+   "read_only": 1
   },
   {
    "default": "Active",
@@ -93,11 +95,19 @@
   {
    "fieldname": "section_break_1e5sn",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "madarasa_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Madarasa Class",
+   "options": "Madarasa Class",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-07-13 16:36:26.604923",
+ "modified": "2025-12-30 20:07:37.574689",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Madarasa Student",

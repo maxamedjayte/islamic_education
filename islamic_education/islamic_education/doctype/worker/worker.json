@@ -26,11 +26,7 @@
   "image",
   "status",
   "company_details_section",
-  "company",
-  "column_break_xd2xh",
   "worker_type",
-  "column_break_dx1fk",
-  "department",
   "employment_details",
   "scheduled_confirmation_date",
   "column_break_32",
@@ -67,12 +63,6 @@
   "health_details",
   "profile_tab",
   "bio",
-  "educational_qualification",
-  "education",
-  "previous_work_experience",
-  "external_work_history",
-  "history_in_company",
-  "internal_work_history",
   "exit",
   "resignation_letter_date",
   "relieving_date",
@@ -88,8 +78,7 @@
   "feedback",
   "lft",
   "rgt",
-  "old_parent",
-  "connections_tab"
+  "old_parent"
  ],
  "fields": [
   {
@@ -200,15 +189,6 @@
    "fieldname": "company_details_section",
    "fieldtype": "Section Break",
    "label": "Company Details"
-  },
-  {
-   "fieldname": "company",
-   "fieldtype": "Link",
-   "label": "Company",
-   "options": "Company",
-   "print_hide": 1,
-   "remember_last_selected_value": 1,
-   "reqd": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -425,44 +405,6 @@
   },
   {
    "collapsible": 1,
-   "fieldname": "educational_qualification",
-   "fieldtype": "Section Break",
-   "label": "Educational Qualification"
-  },
-  {
-   "fieldname": "education",
-   "fieldtype": "Table",
-   "label": "Education",
-   "options": "Employee Education"
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "previous_work_experience",
-   "fieldtype": "Section Break",
-   "label": "Previous Work Experience",
-   "options": "Simple"
-  },
-  {
-   "fieldname": "external_work_history",
-   "fieldtype": "Table",
-   "label": "External Work History",
-   "options": "Employee External Work History"
-  },
-  {
-   "collapsible": 1,
-   "fieldname": "history_in_company",
-   "fieldtype": "Section Break",
-   "label": "History In Company",
-   "options": "Simple"
-  },
-  {
-   "fieldname": "internal_work_history",
-   "fieldtype": "Table",
-   "label": "Internal Work History",
-   "options": "Employee Internal Work History"
-  },
-  {
-   "collapsible": 1,
    "fieldname": "exit",
    "fieldtype": "Tab Break",
    "label": "Exit",
@@ -570,12 +512,6 @@
    "label": "Old Parent"
   },
   {
-   "fieldname": "connections_tab",
-   "fieldtype": "Tab Break",
-   "label": "Connections",
-   "show_dashboard": 1
-  },
-  {
    "fieldname": "worker_type",
    "fieldtype": "Link",
    "in_filter": 1,
@@ -585,25 +521,12 @@
    "label": "Worker Type",
    "options": "Worker Type",
    "reqd": 1
-  },
-  {
-   "fieldname": "column_break_xd2xh",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_dx1fk",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "department",
-   "fieldtype": "Data",
-   "label": "Department"
   }
  ],
  "icon": "fa fa-user",
  "image_field": "image",
  "links": [],
- "modified": "2024-07-28 09:54:13.148250",
+ "modified": "2025-12-30 18:59:29.125008",
  "modified_by": "Administrator",
  "module": "Islamic Education",
  "name": "Worker",

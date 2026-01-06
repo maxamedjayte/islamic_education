@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:class_name",
+ "creation": "2025-12-30 18:52:17.923482",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "class_name",
+  "column_break_knei",
+  "level",
+  "section_break_zhqc",
+  "teacher",
+  "total_students",
+  "column_break_uzbz",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "class_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Class Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_knei",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Level",
+   "options": "\u0645\u0628\u062a\u062f\u0626\n\u0645\u062a\u0648\u0633\u0637\n\u0645\u0628\u062a\u062f\u0626"
+  },
+  {
+   "fieldname": "section_break_zhqc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "teacher",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Teacher",
+   "options": "Worker"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "default": "1",
+   "fieldname": "total_students",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Students",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_uzbz",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Madarasa Student",
+   "link_fieldname": "madarasa_class"
+  }
+ ],
+ "modified": "2025-12-30 19:06:18.419478",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Madarasa Class",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-30 19:25:17.372603",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_xyg4",
+  "madarasa_class",
+  "column_break_ccwc",
+  "class_level",
+  "teacher",
+  "month",
+  "students_quran_level_section",
+  "madarasa_students_quran_level",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_xyg4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "madarasa_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Madarasa Class",
+   "no_copy": 1,
+   "options": "Madarasa Class",
+   "print_hide": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_ccwc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "madarasa_class.teacher",
+   "fieldname": "teacher",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Teacher"
+  },
+  {
+   "fetch_from": "madarasa_class.level",
+   "fieldname": "class_level",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class Level"
+  },
+  {
+   "fieldname": "students_quran_level_section",
+   "fieldtype": "Section Break",
+   "label": "STUDENTS QURAN LEVEL"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Student Quran Progress",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "madarasa_students_quran_level",
+   "fieldtype": "Table",
+   "label": "Madarasa Students Quran Level",
+   "options": "Madarasa Students Quran Level"
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Month"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-12-31 10:05:13.421010",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Student Quran Progress",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "madarasa_class"
+}
