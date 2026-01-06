@@ -1,0 +1,120 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"adUsxuOtBy\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">MADARASA DASHBOARD</span>\",\"col\":12}},{\"id\":\"CInZ5AkaMq\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u0639\u062f\u062f \u0627\u0644\u0637\u0644\u0627\u0628 \u0627\u0644\u0645\u062f\u0627\u0631\u0633\",\"col\":3}},{\"id\":\"PWcmkGz2Qy\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u0639\u062f\u062f \u0641\u0635\u0648\u0644 \u0627\u0644\u0645\u062f\u0627\u0631\u0633 \u0627\u0644\u062f\u064a\u0646\u064a\u0629\",\"col\":3}},{\"id\":\"YS2N3DgP2f\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"\u0639\u062f\u062f \u0635\u0641\u0648\u0641 \u0627\u0645\u062a\u062d\u0627\u0646\u0627\u062a \u0627\u0644\u0645\u062f\u0627\u0631\u0633 \u0627\u0644\u062f\u064a\u0646\u064a\u0629\",\"col\":4}},{\"id\":\"cRntiRNF7V\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"FUBCaDZlo8\",\"type\":\"card\",\"data\":{\"card_name\":\"Madarasa Managment\",\"col\":4}},{\"id\":\"B_K1rnSZIE\",\"type\":\"card\",\"data\":{\"card_name\":\"Madarasa Proceses\",\"col\":4}},{\"id\":\"hSBaNm3idq\",\"type\":\"card\",\"data\":{\"card_name\":\"Madarasa Reports\",\"col\":4}},{\"id\":\"SMsczYmvIh\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "creation": "2025-12-30 20:29:05.924051",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "file",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Madarasa",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Madarasa Managment",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Madarasa Class",
+   "link_count": 0,
+   "link_to": "Madarasa Class",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Madarasa Student",
+   "link_count": 0,
+   "link_to": "Madarasa Student",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Madarasa Proceses",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Student Quran Progress",
+   "link_count": 0,
+   "link_to": "Student Quran Progress",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Madarasa Exam",
+   "link_count": 0,
+   "link_to": "Madarasa Exam",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Madarasa Reports",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Students Quran Level Report",
+   "link_count": 0,
+   "link_to": "Madarasa Student Quran Level Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-01-06 07:11:52.176015",
+ "modified_by": "Administrator",
+ "module": "Islamic Education",
+ "name": "Madarasa",
+ "number_cards": [
+  {
+   "label": "\u0639\u062f\u062f \u0627\u0644\u0637\u0644\u0627\u0628 \u0627\u0644\u0645\u062f\u0627\u0631\u0633",
+   "number_card_name": "Madara Students Count"
+  },
+  {
+   "label": "\u0639\u062f\u062f \u0635\u0641\u0648\u0641 \u0627\u0645\u062a\u062d\u0627\u0646\u0627\u062a \u0627\u0644\u0645\u062f\u0627\u0631\u0633 \u0627\u0644\u062f\u064a\u0646\u064a\u0629",
+   "number_card_name": "Madarasa Exam Class Count"
+  },
+  {
+   "label": "\u0639\u062f\u062f \u0641\u0635\u0648\u0644 \u0627\u0644\u0645\u062f\u0627\u0631\u0633 \u0627\u0644\u062f\u064a\u0646\u064a\u0629",
+   "number_card_name": "Madarasa Class Count"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 23.0,
+ "shortcuts": [],
+ "title": "Madarasa"
+}
